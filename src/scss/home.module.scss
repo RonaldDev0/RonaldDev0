@@ -1,0 +1,78 @@
+@use 'vars' as v;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resalted {
+  color: v.$color-primary;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    flex-wrap: wrap;
+  }
+  
+  .textContainer {
+    background-color: v.$color-background;
+    font-size: 25px;
+    padding: 40px;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 650px;
+    margin-top: 30px;
+    color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .messageContainer {
+    margin-right: 250px;
+    margin-left: 250px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    flex-wrap: wrap;
+  }
+  
+  .textContainer {
+    background-color: v.$color-background;
+    font-size: 25px;
+    padding: 40px;
+    border-radius: 10px;
+    width: 280px;
+    max-width: 650px;
+    margin-top: 30px;
+    color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .image {
+    width: 250px;
+  }
+}

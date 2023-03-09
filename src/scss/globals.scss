@@ -1,0 +1,20 @@
+@use 'vars' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #292929;
+  color: #FFFFFF;
+}
+
+body::-webkit-scrollbar {
+  color: transparent;
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: v.$color-selected;
+  border-radius: 10px;
+}

@@ -1,0 +1,55 @@
+@use 'vars' as v;
+
+.background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.Link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all .25s;
+}
+
+.Link:hover {
+  background-color: v.$color-selected;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    background-color: v.$color-background;
+    display: flex;
+    width: 35%;
+    min-width: 600px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    background-color: v.$color-background;
+    display: flex;
+    width: 90%;
+    height: 50px;
+    margin-top: 650px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+  }
+}
