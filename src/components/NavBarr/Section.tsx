@@ -10,7 +10,7 @@ import { link } from './routes'
 
 export default function Section ({ icon, name, path }: link) {
   return (
-    <Link href={path} className={style.Link}>
+    <Link href={path}>
       <Image width='20' height='20' alt={name} title={name} src={icon} />
       <p>{name}</p>
     </Link>

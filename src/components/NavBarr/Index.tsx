@@ -7,10 +7,10 @@ import style from '@/scss/navBarr.module.scss'
 
 export default function NavBarr () {
   return (
-    <div className={style.background}>
-      <div className={style.container}>
-        {Links.map(({ icon, name, path }: link) => <Section key={path} icon={icon} name={name} path={path} />)}
-      </div>
+    <div>
+      {
+        Links.map(({ icon, name, path }: link) => <Section key={path} icon={icon} name={name} path={path} />)
+      }
     </div>
   )
 }
