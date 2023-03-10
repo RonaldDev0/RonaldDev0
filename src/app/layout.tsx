@@ -16,7 +16,9 @@ export default function RootLayout ({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <NavBarr />
+        <div className='container_navBarr'>
+          <NavBarr />
+        </div>
         {children}
       </body>
     </html>

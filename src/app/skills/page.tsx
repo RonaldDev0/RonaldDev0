@@ -9,7 +9,7 @@ import style from '@/scss/skills.module.scss'
 
 const getIcons = (input: tool[]) => {
   return (
-    <div>
+    <>
       {
         input.map(({ icon, name }) => {
           return (
@@ -20,26 +20,29 @@ const getIcons = (input: tool[]) => {
               width='80'
               height='80'
               src={icon}
+              className={style.image}
             />
           )
         })
       }
-    </div>
+    </>
   )
 }
 
 function Skillset ({ title, icons }: any) {
   return (
-    <div>
+    <div className={style.subContainer}>
       {title}
-      {icons}
+      <div className={style.skills}>
+        {icons}
+      </div>
     </div>
   )
 }
 
 export default function Skills () {
   return (
-    <div>
+    <div className={style.container}>
       <Skillset
         title={<b>Skillset</b>}
         icons={getIcons(skills)}

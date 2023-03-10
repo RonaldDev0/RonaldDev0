@@ -1,4 +1,22 @@
-$color-primary: #D056DB;
-$color-selected: #d056dbaf;
-$color-background: #3F3F3F;
-$color-body: #292929;
+$color: (
+  'primary': #D056DB,
+  'selected': #d056dbaf,
+  'text': #d4d4d4,
+  'background':  #3F3F3F,
+  'body': #292929
+);
+
+$border: 10px;
+
+@mixin desktop {
+  @media screen and (min-width: 800px) {
+    @content
+  }
+};
+
+
+@mixin mobile {
+  @media screen and (max-width: 800px) {
+    @content
+  }
+};

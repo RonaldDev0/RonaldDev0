@@ -10,9 +10,9 @@ import { link } from './routes'
 
 export default function Section ({ icon, name, path }: link) {
   return (
-    <Link href={path}>
+    <Link href={path} className={style.container_link}>
       <Image width='20' height='20' alt={name} title={name} src={icon} />
-      <p>{name}</p>
+      <p className={style.title}>{name}</p>
     </Link>
   )
 }

@@ -1,0 +1,82 @@
+@use 'vars' as v;
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+  margin-top: 200px;
+  width: 90vw;
+  max-width: 500px;
+}
+
+.email {
+  background-color: map-get(v.$color, 'background' );
+  color: white;
+  border-radius: v.$border;
+  border: none;
+  padding: 10px;
+  height: 30px;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.message {
+  background-color: map-get(v.$color, 'background' );
+  color: white;
+  border-radius: v.$border;
+  border: none;
+  padding: 20px;
+  height: 50vh;
+  max-height: 350px;
+  font-size: 25px;
+  resize: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.submit {
+  background-color: map-get(v.$color, 'selected' );
+  color: white;
+  border-radius: v.$border;
+  border: none;
+  height: 40px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: map-get(v.$color, 'primary' );
+  }
+}
+
+.link {
+  margin: 50px
+}
+
+@include v.mobile {
+  .form {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  .submit {
+    font-size: 20px;
+  }
+
+  .links {
+    margin-bottom: 100px;
+  }
+};

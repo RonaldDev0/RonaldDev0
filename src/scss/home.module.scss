@@ -1,78 +1,76 @@
 @use 'vars' as v;
 
-.container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+.name {
+  color: white;
 }
 
-.resalted {
-  color: v.$color-primary;
-}
 
-.flex {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+.container_second_message_text {
+  background-color: map-get(v.$color, 'background' );
+  width: 800px;
+  border-radius: v.$border;
+  }
 
-@media screen and (min-width: 800px) {
-  .flexContainer {
+
+
+@include v.desktop {
+  .container_first_message {
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 300px;
     margin-top: 200px;
-    margin-bottom: 200px;
-    flex-wrap: wrap;
+    font-size: 40px;
+
   }
-  
-  .textContainer {
-    background-color: v.$color-background;
-    font-size: 25px;
-    padding: 40px;
-    border-radius: 10px;
-    width: 85%;
-    max-width: 650px;
-    margin-top: 30px;
-    color: rgb(218, 218, 218);
+
+  .container_second_message {
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .messageContainer {
-    margin-right: 250px;
-    margin-left: 250px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .flexContainer {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 100px;
-    margin-top: 200px;
+    align-items: center;
+    gap: 50px;
+    margin-top: 400px;
     margin-bottom: 200px;
-    flex-wrap: wrap;
+    font-size: 20px;
   }
   
-  .textContainer {
-    background-color: v.$color-background;
-    font-size: 25px;
-    padding: 40px;
-    border-radius: 10px;
-    width: 280px;
-    max-width: 650px;
-    margin-top: 30px;
-    color: rgb(218, 218, 218);
+  .container_second_message_tittle {
+    width: 50vw;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
   }
-  
+
+  .container_second_message_text {
+    width: 70%;
+    padding: 30px;
+    text-align: start;
+  }
+};
+@include v.mobile {
+  .container {
+    font-size: 20px;
+  }
+  .container_first_message {
+    font-size: 40px;
+  }
   .image {
-    width: 250px;
+    width: 60vw;
   }
-}
+  .container_second_message {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container_second_message_text {
+    width: 75vw;
+    padding: 18px;
+    margin-bottom: 100px;
+    text-align: left;
+  }
+};

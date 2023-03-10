@@ -8,6 +8,9 @@
 body {
   background-color: #292929;
   color: #FFFFFF;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -15,6 +18,22 @@ body::-webkit-scrollbar {
   width: 7px;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: v.$color-selected;
+  background-color: map-get( v.$color, 'selected' );
   border-radius: 10px;
 }
+
+b {
+  color: map-get(v.$color, 'primary')
+}
+
+.container_navBarr {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+
+@include v.desktop {};
+@include v.mobile {};

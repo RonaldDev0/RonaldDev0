@@ -1,0 +1,88 @@
+@use 'vars' as v;
+
+$image: (
+  'width': 400px,
+  'height': 230px
+);
+
+.container {
+  width: 100vw;
+  margin-top: 200px
+}
+
+.title {
+  font-size: 30px;
+}
+
+.container_projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 100px
+}
+
+.project {
+  background-color: map-get(v.$color, 'background');
+  width: map-get($image, 'width');
+  display: flex;
+  flex-direction: column;
+}
+
+.project_title {
+  margin-top: 20px;
+}
+
+.description {
+  color: map-get(v.$color, 'text');
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container_links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: map-get(v.$color, 'selected');
+
+  &:hover {
+    color: map-get(v.$color, 'primary');
+  }
+}
+
+@include v.mobile {
+  .container {
+    width: 100vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container_projects {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 80px;
+    margin-bottom: 200px;
+  }
+
+  .project {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .image {
+    width: 90vw;
+    height: 25.25vh;
+  }
+  
+};
