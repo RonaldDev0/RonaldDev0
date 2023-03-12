@@ -10,7 +10,7 @@ function Start () {
   return (
     <div className={style.container_first_message}>
       <p>Hi There ! I'M <br />
-        <b className={style.name}>Ronald Zamora</b> <br />
+        <b className={style.name}> Ronald Zamora</b> <br />
         {'<'} <b>Frontend Developer</b> {'/>'}
       </p>
       <Image width='499' height='500' alt='Developer' src='/Developer.svg' className={style.image} />

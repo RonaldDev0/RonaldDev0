@@ -40,6 +40,10 @@ export const skills: tool[] = [
 
 export const tools: tool[] = [
   {
+    icon: './tools/Figma.svg',
+    name: 'Figma'
+  },
+  {
     icon: './tools/Vscode.svg',
     name: 'Vs Code'
   },
@@ -58,9 +62,5 @@ export const tools: tool[] = [
   {
     icon: './tools/Vercel.svg',
     name: 'Vercel'
-  },
-  {
-    icon: './tools/Figma.svg',
-    name: 'Figma'
   }
 ]

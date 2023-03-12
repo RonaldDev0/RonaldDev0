@@ -1,10 +1,5 @@
 @use 'vars' as v;
 
-.name {
-  color: white;
-}
-
-
 .container_second_message_text {
   background-color: map-get(v.$color, 'background' );
   width: 800px;
@@ -13,6 +8,27 @@
 
 
 
+.name {
+color: white;
+display: inline-block;
+white-space: nowrap;
+border-right: 4px solid;
+width: 11.5ch;
+
+animation: typing 3s steps(13), blink .6s infinite step-end alternate;
+overflow:hidden;
+// delay*********************************************************************************************************************************************************************************************************
+animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+from { width: 0 }
+}
+
+@keyframes blink {
+ 50% { border-color: transparent }
+}
+
 @include v.desktop {
   .container_first_message {
     width: 100vw;
@@ -20,7 +36,7 @@
     align-items: center;
     justify-content: center;
     gap: 300px;
-    margin-top: 200px;
+    padding-top: 200px;
     font-size: 40px;
 
   }

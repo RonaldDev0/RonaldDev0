@@ -21,8 +21,8 @@ export default function Projects () {
                 <b className={style.project_title}>{title}</b>
                 <p className={style.description}>{description}</p>
                 <div className={style.container_links}>
-                  <Link href={gitHub} className={style.link}>GitHub</Link>
-                  <Link href={deploy} className={style.link}>Deploy</Link>
+                  <Link href={gitHub} target='_blank' className={style.link}>GitHub</Link>
+                  <Link href={deploy} target='_blank' className={style.link}>Deploy</Link>
                 </div>
               </div>
             )
