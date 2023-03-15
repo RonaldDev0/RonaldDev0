@@ -14,7 +14,8 @@ function Start () {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ['Frontend Developer'],
-      typeSpeed: 150
+      typeSpeed: 150,
+      loop: true
     })
 
     return () => {
