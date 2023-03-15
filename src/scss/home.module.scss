@@ -10,23 +10,6 @@
 
 .name {
 color: white;
-display: inline-block;
-white-space: nowrap;
-border-right: 4px solid;
-width: 11.5ch;
-
-animation: typing 3s steps(13), blink .6s infinite step-end alternate;
-overflow:hidden;
-// delay*********************************************************************************************************************************************************************************************************
-animation-iteration-count: infinite;
-}
-
-@keyframes typing {
-from { width: 0 }
-}
-
-@keyframes blink {
- 50% { border-color: transparent }
 }
 
 @include v.desktop {
@@ -39,6 +22,10 @@ from { width: 0 }
     padding-top: 200px;
     font-size: 40px;
 
+  }
+
+  .p_message {
+    min-width: 490px
   }
 
   .container_second_message {

@@ -1,17 +1,32 @@
+'use client'
+
 // Imports
+import { useRef, useEffect } from 'react'
 import Image from 'next/image'
+import Typed from 'typed.js'
 
 // Style
 import style from '@/scss/home.module.scss'
 
-// SubComponents
-
 function Start () {
+  const el = useRef(null)
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['Frontend Developer'],
+      typeSpeed: 150
+    })
+
+    return () => {
+      typed.destroy()
+    }
+  })
+
   return (
     <div className={style.container_first_message}>
-      <p>Hi There ! I'M <br />
+      <p className={style.p_message}>Hi There ! I'M <br />
         <b className={style.name}> Ronald Zamora</b> <br />
-        {'<'} <b>Frontend Developer</b> {'/>'}
+        {'<'} <b ref={el} /> {'/>'}
       </p>
       <Image width='499' height='500' alt='Developer' src='/Developer.svg' className={style.image} />
     </div>
