@@ -8,11 +8,18 @@ export interface project {
 
 export const listProjects: project[] = [
   {
-    preview: '/preview/Todo.svg',
-    title: 'Todo App',
-    description: 'This is a web app where you can create, read, modify and delete your to-do list and all this in real time where you can access it from any device, simply by logging in with your github account',
-    gitHub: new URL('https://github.com/ronald7745/Todo-app'),
-    deploy: new URL('https://todo-app-ronald7745.vercel.app/')
+    preview: '/preview/Chat-bot.svg',
+    title: 'Chat bot',
+    description: 'This is a chat Bot using opnenai API, this bot cand response any question',
+    gitHub: new URL('https://github.com/ronald7745/chat-bot'),
+    deploy: new URL('https://chat-bot-ronald7745.vercel.app/')
+  },
+  {
+    preview: '/preview/Url-shortener.svg',
+    title: 'Url shortener',
+    description: 'This is a Shortener for urls, you can shorter the large urls',
+    gitHub: new URL('https://github.com/ronald7745/url-shortener'),
+    deploy: new URL('https://urll.fun')
   },
   {
     preview: '/preview/Chat.svg',
@@ -22,8 +29,15 @@ export const listProjects: project[] = [
     deploy: new URL('https://chat-app-ronald7745.vercel.app')
   },
   {
+    preview: '/preview/Todo.svg',
+    title: 'Todo App',
+    description: 'This is a web app where you can create, read, modify and delete your to-do list and all this in real time where you can access it from any device, simply by logging in with your github account',
+    gitHub: new URL('https://github.com/ronald7745/Todo-app'),
+    deploy: new URL('https://todo-app-ronald7745.vercel.app/')
+  },
+  {
     preview: '/preview/Payments.svg',
-    title: 'Subscription Paymentsr',
+    title: 'Subscription Payments',
     description: 'This is a payment gateway (coming soon)',
     gitHub: new URL('https://github.com/ronald7745/subscription-payments'),
     deploy: new URL('https://subscription-payments-nine.vercel.app/')
