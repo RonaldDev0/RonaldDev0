@@ -1,11 +1,9 @@
-import { Button } from '@/components/ui/button'
+import Hero from '@/components/Hero'
 
 export default function Home () {
   return (
-    <main className='w-screen h-screen flex flex-col justify-center items-center gap-3'>
-      <h1>Hello, world!</h1>
-      <h2>This is my portfolio!!</h2>
-      <Button>Hello world!!</Button>
+    <main className='w-full flex flex-col items-center'>
+      <Hero />
     </main>
   )
 }
