@@ -38,7 +38,12 @@ export const metadata: Metadata = {
     'Jest',
     'Supabase',
     'Flutter',
-    'Dart'
+    'Dart',
+    'Ronald Zamora',
+    'RonaldDev0',
+    'Ronald',
+    'Zamora',
+    'Ronald Zamora Software Developer'
   ]
 }
 
