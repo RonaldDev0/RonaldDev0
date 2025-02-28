@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 export default function Hero () {
   return (
-    <div className='w-full flex max-[1000px]:flex-col-reverse items-center min-[1000px]:justify-between max-[700px]:gap-20 min-[1000px]:h-screen max-[1000px]:my-18'>
+    <div className='w-full flex max-[1000px]:flex-col-reverse items-center min-[1000px]:justify-between max-[700px]:gap-20 min-[1000px]:h-screen max-[1000px]:my-12'>
       <div className='space-y-6'>
         <p className='text-6xl font-bold'>
           I&apos;m
@@ -69,6 +69,7 @@ export default function Hero () {
           width='300'
           height='300'
           alt='picture'
+          loading='eager'
           className='rounded-full border-4 border-primary'
         />
       </div>
