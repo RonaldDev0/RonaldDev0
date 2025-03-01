@@ -33,6 +33,7 @@ const stacks: IStack[] = [
       { name: 'Bun', img: '/stack/backend/bun.svg' },
       { name: 'NextJS', img: '/stack/backend/nextjs_icon_dark.svg' },
       { name: 'Supabase', img: '/stack/backend/supabase.svg' },
+      { name: 'Mercado Pago', img: '/stack/backend/mercado-pago.svg' },
       { name: 'PostgreSQL', img: '/stack/backend/postgresql.svg' },
       { name: 'Python', img: '/stack/backend/python.svg' }
     ]
@@ -63,9 +64,11 @@ const stacks: IStack[] = [
 
 export default function Stack () {
   return (
-    <section id='stack' aria-label='stack' className='w-full space-y-6'>
-      <h2 className='text-3xl font-bold mt-10'>Stack</h2>
-      <div className='grid grid-cols-2 gap-6'>
+    <section id='stack' aria-label='stack' className='w-full space-y-6 mb-32'>
+      <h2 className='text-3xl font-bold mt-10'>
+        Stack
+      </h2>
+      <div className='min-[1000px]:grid min-[1000px]:grid-cols-2 min-[1000px]:gap-6 max-[1000px]:space-y-6'>
         {stacks.map(({ title, stack }) => (
           <Card key={title}>
             <CardHeader>
@@ -78,7 +81,7 @@ export default function Stack () {
             <CardContent>
               <div className='grid grid-cols-4 gap-6'>
                 {stack.map(({ name, img }) => (
-                  <div key={name} className='space-y-2 flex flex-col items-center hover:scale-125 transition-transform'>
+                  <div key={name} className='space-y-2 flex flex-col items-center min-[1000px]:hover:scale-125 min-[1000px]:transition-transform'>
                     <Image
                       src={img}
                       alt={name}
@@ -86,7 +89,9 @@ export default function Stack () {
                       height='50'
                       className='w-[50px] h-[50px]'
                     />
-                    <p className='text-sm'>{name}</p>
+                    <p className='text-sm'>
+                      {name}
+                    </p>
                   </div>
                 ))}
               </div>

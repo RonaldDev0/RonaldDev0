@@ -55,14 +55,16 @@ const projects: IProject[] = [
 export default function Projects () {
   return (
     <section id='projects' className='w-full space-y-6 mb-32'>
-      <h2 className='text-3xl font-bold'>Projects</h2>
+      <h2 className='text-3xl font-bold'>
+        Projects
+      </h2>
       <div>
         <p>Here are some of the projects I&apos;ve worked on.</p>
         <CardDescription>
           The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.
         </CardDescription>
       </div>
-      <div className='grid grid-cols-3 gap-6'>
+      <div className='min-[1000px]:grid min-[1000px]:grid-cols-3 min-[1000px]:gap-6 max-[1000px]:flex max-[1000px]:flex-col max-[1000px]:gap-6'>
         {projects.map((project, index) => (
           project.link
             ? (
