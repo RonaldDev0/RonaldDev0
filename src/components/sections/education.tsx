@@ -98,7 +98,7 @@ export default function Education () {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className='grid grid-cols-4 gap-6 items-center'>
+          <div className='grid min-[1000px]:grid-cols-4 max-[1000px]:grid-cols-3  gap-6 items-center'>
             {education.map(item => (
               <Link
                 key={item.link}

@@ -3,6 +3,34 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Suspense } from 'react'
 
+type IButton = {
+  text: string,
+  ariaLabel: string,
+  href: string,
+  img: string
+}
+
+const buttons: IButton[] = [
+  {
+    text: 'LinkedIn',
+    ariaLabel: 'LInkedin Profile',
+    href: 'https://www.linkedin.com/in/ronald-zamora-524094353/',
+    img: '/icons/linkedin.svg'
+  },
+  {
+    text: 'GitHub',
+    ariaLabel: 'GitHub Profile',
+    href: 'https://github.com/RonaldDev0',
+    img: '/icons/github.svg'
+  },
+  {
+    text: 'Resume',
+    ariaLabel: 'View Resume',
+    href: '/resume',
+    img: '/icons/file.svg'
+  }
+]
+
 export default function Hero () {
   return (
     <section
@@ -22,57 +50,30 @@ export default function Hero () {
         </p>
         <meta name='description' content='Ronald Zamora - Software Developer portfolio. Explore my projects, experience, and skills.' />
         <div className='space-x-2 flex'>
-          <Link href='https://www.linkedin.com/in/ronald-zamora-524094353/' target='_blank' rel='noopener' aria-label='LinkedIn Profile'>
-            <Button
-              variant='outline'
-              size='lg'
-              className='text-lg flex gap-4 p-4'
-              tabIndex={-1}
+          {buttons.map(button => (
+            <Link
+              key={button.text}
+              href={button.href}
+              target='_blank'
+              aria-label={button.ariaLabel}
             >
-              <Image
-                src='/icons/linkedin.svg'
-                width={25}
-                height={25}
-                alt='LinkedIn icon'
-                priority
-              />
-              LinkedIn
-            </Button>
-          </Link>
-          <Link href='https://github.com/RonaldDev0' target='_blank' rel='noopener' aria-label='GitHub Profile'>
-            <Button
-              variant='outline'
-              size='lg'
-              className='text-lg flex gap-4 p-4'
-              tabIndex={-1}
-            >
-              <Image
-                src='/icons/github.svg'
-                width={25}
-                height={25}
-                alt='GitHub icon'
-                priority
-              />
-              GitHub
-            </Button>
-          </Link>
-          <Link href='/resume' target='_blank' aria-label='View Resume'>
-            <Button
-              variant='outline'
-              size='lg'
-              className='text-lg flex gap-4 p-4'
-              tabIndex={-1}
-            >
-              <Image
-                src='/icons/file.svg'
-                width={25}
-                height={25}
-                alt='Resume file icon'
-                priority
-              />
-              Resume
-            </Button>
-          </Link>
+              <Button
+                variant='outline'
+                size='lg'
+                className='text-lg flex gap-4 p-4'
+                tabIndex={-1}
+              >
+                <Image
+                  src={button.img}
+                  width={25}
+                  height={25}
+                  alt={button.text}
+                  priority
+                />
+                {button.text}
+              </Button>
+            </Link>
+          ))}
         </div>
       </div>
       <Suspense fallback={<div className='w-[300px] h-[300px] rounded-full bg-background' />}>
