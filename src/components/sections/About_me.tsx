@@ -17,7 +17,7 @@ export default function AboutMe () {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className='flex justify-between gap-36 items-center'>
+          <div className='flex max-[1000px]:flex-col-reverse justify-between min-[1000px]:gap-36 max-[1000px]:gap-12 items-center'>
             <p>
               ¡Hola! Soy Ronald Zamora 👋, un Ingeniero de Software y Desarrollador Web Full-Stack apasionado por aprender y superar desafíos. Más allá del código, me encanta explorar nuevas tecnologías y metodologías para mantenerme a la vanguardia en este dinámico mundo digital. 💡
               <br /><br />

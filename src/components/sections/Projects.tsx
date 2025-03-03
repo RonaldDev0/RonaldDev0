@@ -83,7 +83,7 @@ export default function Projects () {
                   </CardContent>
                   <CardFooter>
                     <CardDescription className='hover:text-white transition-colors px-1 py-3 w-full'>
-                      View Projects
+                      View Project
                     </CardDescription>
                   </CardFooter>
                 </Card>
