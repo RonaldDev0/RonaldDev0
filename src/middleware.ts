@@ -23,6 +23,6 @@ export function middleware (req: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|_next/data|_vercel|favicon.ico$|manifest.json$|resume.pdf$|.*\\.(?:svg|webp|woff2)$).*)'
+    '/((?!api|_next/static|_next/image|_next/data|_vercel|favicon.ico$|.*\\.(?:svg|webp|woff2|pdf)$).*)'
   ]
 }
