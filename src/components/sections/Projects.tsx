@@ -92,8 +92,12 @@ export default function Projects () {
             : (
               <Card key={index}>
                 <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardTitle>
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription>
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p>{project.content}</p>
