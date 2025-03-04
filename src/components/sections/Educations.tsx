@@ -76,18 +76,30 @@ const education: IEducation[] = [
   }
 ]
 
-export default function Education () {
+export default function Education ({ en }: { en: boolean }) {
   return (
     <section id='education' className='w-full flex flex-col gap-6 mb-32'>
       <h2 className='text-3xl font-bold mt-10'>
-        Education
+        {en ? 'Educación' : 'Educación'}
       </h2>
       <CardDescription>
-        Throughout my training as a self-taught developer, YouTube has been my main ally.
+        {
+          en
+            ? 'Throughout my training as a self-taught developer, YouTube has been my main ally.'
+            : 'A lo largo de mi formación como desarrollador autodidacta, YouTube ha sido mi principal aliado.'
+        }
         <br />
-        For years I have absorbed knowledge from multiple specialized channels, which has allowed me to master new technologies and always stay up to date with the latest trends in software development.
+        {
+          en
+            ? 'For years I have absorbed knowledge from multiple specialized channels, which has allowed me to master new technologies and always stay up to date with the latest trends in software development.'
+            : 'Durante años he absorbido conocimientos de múltiples canales especializados, lo que me ha permitido dominar nuevas tecnologías y estar siempre actualizado con las últimas tendencias en desarrollo de software.'
+        }
         <br />
-        Below, I highlight those resources that have marked my professional career and that I consider essential for my continued growth.
+        {
+          en
+            ? 'Below, I highlight those resources that have marked my professional career and that I consider essential for my continued growth.'
+            : 'A continuación, destaco aquellos recursos que han marcado mi trayectoria profesional y que considero imprescindibles para mi continuo crecimiento.'
+        }
       </CardDescription>
       <Card>
         <CardHeader>

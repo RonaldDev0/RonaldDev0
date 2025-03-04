@@ -3,7 +3,10 @@ import Link from 'next/link'
 
 type IProject = {
   title: string
-  description: string
+  description: {
+    en: string
+    es: string
+  }
   content: string
   link?: string
   image?: string
@@ -12,56 +15,84 @@ type IProject = {
 const projects: IProject[] = [
   {
     title: 'Foodllowers',
-    description: 'descrtiption',
+    description: {
+      en: 'descrtiption',
+      es: 'descripcion'
+    },
     content: 'content',
     link: 'https://foodllowers.vercel.app/',
     image: 'image'
   },
   {
     title: 'F-Kitchens',
-    description: 'descrtiption',
+    description: {
+      en: 'descrtiption',
+      es: 'descripcion'
+    },
     content: 'content',
     link: 'https://foodllowers-kitchens.vercel.app/',
     image: 'image'
   },
   {
     title: 'F-Deliverys',
-    description: 'descrtiption',
+    description: {
+      en: 'descrtiption',
+      es: 'descripcion'
+    },
     content: 'content',
     link: 'https://foodllowers-deliverys.vercel.app/',
     image: 'image'
   },
   {
     title: 'F-Influencers',
-    description: 'descrtiption',
+    description: {
+      en: 'descrtiption',
+      es: 'descripcion'
+    },
     content: 'content',
     link: 'https://foodllowers-influencers.vercel.app/',
     image: 'image'
   },
   {
     title: 'StreamingX',
-    description: 'descrtiption',
+    description: {
+      en: 'descrtiption',
+      es: 'descripcion'
+    },
     content: 'content',
     link: 'https://streaming-x.vercel.app/',
     image: 'image'
   },
   {
     title: 'Portfolio',
-    description: 'descrtiption',
+    description: {
+      en: 'descrtiption',
+      es: 'descripcion'
+    },
     content: 'content'
   }
 ]
 
-export default function Projects () {
+export default function Projects ({ en }: { en: boolean }) {
   return (
     <section id='projects' className='w-full space-y-6 mb-32'>
       <h2 className='text-3xl font-bold'>
-        Projects
+        {en ? 'Projects' : 'Proyectos'}
       </h2>
       <div>
-        <p>Here are some of the projects I&apos;ve worked on.</p>
+        <p>
+          {
+            en
+              ? 'Here are some of the projects I\'ve worked on.'
+              : 'Aquí se muestran algunos de los proyectos en los que he trabajado.'
+          }
+        </p>
         <CardDescription>
-          The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.
+          {
+            en
+              ? 'The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.'
+              : 'El prefijo F significa que es parte de la matriz de aplicaciones de Foodllowers, ya que desarrollé todo el modelo de negocio y es completamente funcional, para efectos prácticos lo dividí en apps para una mejor explicación.'
+          }
         </CardDescription>
       </div>
       <div className='min-[1000px]:grid min-[1000px]:grid-cols-3 min-[1000px]:gap-6 max-[1000px]:flex max-[1000px]:flex-col max-[1000px]:gap-6'>
@@ -75,7 +106,7 @@ export default function Projects () {
                       {project.title}
                     </CardTitle>
                     <CardDescription>
-                      {project.description}
+                      {project.description[en ? 'en' : 'es']}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -96,7 +127,7 @@ export default function Projects () {
                     {project.title}
                   </CardTitle>
                   <CardDescription>
-                    {project.description}
+                    {project.description[en ? 'en' : 'es']}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

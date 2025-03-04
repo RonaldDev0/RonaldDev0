@@ -62,7 +62,7 @@ const stacks: IStack[] = [
   }
 ]
 
-export default function Stack () {
+export default function Stack ({ en }: { en: boolean }) {
   return (
     <section id='stack' aria-label='stack' className='w-full space-y-6 mb-32'>
       <h2 className='text-3xl font-bold mt-10'>
@@ -74,7 +74,7 @@ export default function Stack () {
             <CardHeader>
               <CardTitle>
                 <p className='text-xl'>
-                  {title}
+                  {!en && title === 'Learning' ? 'Aprendiendo' : !en && title === 'Tools' ? 'Herramientas' : title }
                 </p>
               </CardTitle>
             </CardHeader>

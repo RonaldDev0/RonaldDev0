@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Suspense } from 'react'
+import Lang from '@/components/Lang'
 
 type IButton = {
   text: string,
@@ -31,22 +32,23 @@ const buttons: IButton[] = [
   }
 ]
 
-export default function Hero () {
+export default function Hero ({ en }: { en: boolean }) {
   return (
     <section
       id='hero'
       aria-label='hero'
       className='w-full flex max-[1000px]:flex-col-reverse items-center min-[1000px]:justify-between max-[700px]:gap-20 min-[1000px]:h-screen max-[1000px]:my-12 relative'
     >
+      <Lang en={en} />
       <div className='space-y-6'>
         <p className='text-6xl font-bold'>
-          I&apos;m
+          {en ? 'I\'m' : 'Soy'}
         </p>
         <h1 className='text-6xl font-bold' id='hero-heading'>
           Ronald Zamora
         </h1>
         <p className='text-3xl font-bold text-primary'>
-          Software Developer
+          {en ? 'Software Developer' : 'Desarrollador de software'}
         </p>
         <meta name='description' content='Ronald Zamora - Software Developer portfolio. Explore my projects, experience, and skills.' />
         <div className='space-x-2 flex'>
@@ -89,7 +91,7 @@ export default function Hero () {
       <div className='absolute bottom-12 max-[1000px]:hidden w-full flex justify-center'>
         <Link href='#experience' className='flex items-center gap-1.5' aria-label='Scroll to experience section'>
           <p className='text-primary text-lg font-bold'>
-            Experience
+            {en ? 'Experience' : 'Experiencia'}
           </p>
           <Image
             src='/icons/arrow-down.svg'
