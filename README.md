@@ -25,7 +25,7 @@ Un **ecosistema innovador** similar a Rappi que integra el uso de influencers pa
 ## 📫 Conecta conmigo
 
 - [LinkedIn](https://www.linkedin.com/in/ronald-zamora-524094353/) 🔗
-- [Portfolio]([tu_link_de_portfolio](https://ronaldzamora.vercel.app/)) 🌐
+- [Portfolio](https://ronaldzamora.vercel.app/) 🌐
 - [CV 📄](https://ronaldzamora.vercel.appv/resume)
 
 ---
