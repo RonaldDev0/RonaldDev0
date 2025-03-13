@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ¡Hola, soy Ronald Zamora! 👨‍💻
 
-## Getting Started
+Soy Ingeniero de Software y Desarrollador Web Full-Stack autodidacta, apasionado por transformar ideas en soluciones digitales innovadoras y escalables. He desarrollado, de forma independiente, proyectos de alto impacto que demuestran mi capacidad para gestionar iniciativas complejas de principio a fin.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Proyectos Destacados
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🎥 Streamingx
+Una **plataforma de streaming** al estilo YouTube desarrollada con **Next.js** y **Tailwind CSS**. Implementé **API Routes** para la comunicación interna, utilizando **Supabase** como sistema de base de datos y **Cloudflare R2** para alojar y servir videos de manera eficiente y escalable.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🍽️ Foodllowers
+Un **ecosistema innovador** similar a Rappi que integra el uso de influencers para potenciar ventas. Desarrollé múltiples **PWAs** especializadas para clientes, influencers, cocinas y domiciliarios, conectadas a través de un backend robusto implementado en **Supabase**. Además, integra **MercadoPago** para la gestión de pagos y las **APIs de Google Maps** para optimizar rutas y mapas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💻 Stack Tecnológico
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:** HTML5 • CSS3 • JavaScript • **TypeScript** • **React** • **Next.js** • **Tailwind CSS**
+- **Backend:** **Supabase** • API Routes • **SQL**
+- **Otros:** Experiencia en **Flutter** para aplicaciones móviles, integración con **MercadoPago** y **Google Maps APIs**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📫 Conecta conmigo
 
-## Deploy on Vercel
+- [LinkedIn](https://www.linkedin.com/in/ronald-zamora-524094353/) 🔗
+- [Portfolio]([tu_link_de_portfolio](https://ronaldzamora.vercel.app/)) 🌐
+- [CV 📄](https://ronaldzamora.vercel.appv/resume)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Objetivo
+
+Busco integrarme a equipos dinámicos y colaborativos donde pueda aportar mi visión estratégica, compromiso con la excelencia técnica y pasión por la innovación para impulsar proyectos digitales de alto impacto.
+
+---
+
+¡Gracias por visitar mi perfil! Si te interesa conocer más o trabajar en conjunto, no dudes en contactarme. 😊
