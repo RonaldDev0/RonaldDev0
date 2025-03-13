@@ -1,39 +1,54 @@
-# ¡Hola, soy Ronald Zamora! 👨‍💻
+# Hello, I'm Ronald Zamora! 👨‍💻
 
-Soy Ingeniero de Software y Desarrollador Web Full-Stack autodidacta, apasionado por transformar ideas en soluciones digitales innovadoras y escalables. He desarrollado, de forma independiente, proyectos de alto impacto que demuestran mi capacidad para gestionar iniciativas complejas de principio a fin.
+I'm a self-taught Software Engineer and Full-Stack Web Developer with a passion for turning ideas into innovative, scalable digital solutions. I've independently developed high-impact projects that showcase my ability to manage complex initiatives from start to finish.
 
 ---
 
-## 🚀 Proyectos Destacados
+## 🚀 Featured Projects
 
 ### 🎥 Streamingx
-Una **plataforma de streaming** al estilo YouTube desarrollada con **Next.js** y **Tailwind CSS**. Implementé **API Routes** para la comunicación interna, utilizando **Supabase** como sistema de base de datos y **Cloudflare R2** para alojar y servir videos de manera eficiente y escalable.
+A **streaming platform** similar to YouTube, built with **Next.js** and **Tailwind CSS**. I implemented **API Routes** for seamless internal communication, using **Supabase** as the database and **Cloudflare R2** to efficiently host and serve videos at scale.
 
 ### 🍽️ Foodllowers
-Un **ecosistema innovador** similar a Rappi que integra el uso de influencers para potenciar ventas. Desarrollé múltiples **PWAs** especializadas para clientes, influencers, cocinas y domiciliarios, conectadas a través de un backend robusto implementado en **Supabase**. Además, integra **MercadoPago** para la gestión de pagos y las **APIs de Google Maps** para optimizar rutas y mapas.
+An **innovative ecosystem** akin to Rappi that leverages influencers to boost sales. I developed multiple specialized **PWAs**—one for customers, one for influencers, one for kitchens, and one for delivery personnel—all connected via a robust backend implemented with **Supabase**. The solution also integrates **MercadoPago** for payment processing and **Google Maps APIs** to optimize routes and maps.
 
 ---
 
-## 💻 Stack Tecnológico
+## 💻 Tech Stack
 
-- **Frontend:** HTML5 • CSS3 • JavaScript • **TypeScript** • **React** • **Next.js** • **Tailwind CSS**
-- **Backend:** **Supabase** • API Routes • **SQL**
-- **Otros:** Experiencia en **Flutter** para aplicaciones móviles, integración con **MercadoPago** y **Google Maps APIs**
+**Frontend:**
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+- ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+- ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+
+**Backend:**
+- ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
+- API Routes
+- ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+
+**Others:**
+- ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+- ![MercadoPago](https://img.shields.io/badge/MercadoPago-00B3E6?style=flat-square&logo=mercadopago&logoColor=white)
+- ![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?style=flat-square&logo=google-maps&logoColor=white)
 
 ---
 
-## 📫 Conecta conmigo
+## 📫 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/ronald-zamora-524094353/) 🔗
-- [Portfolio](https://ronaldzamora.vercel.app/) 🌐
+- [LinkedIn 🔗](https://www.linkedin.com/in/ronald-zamora-524094353/)
+- [Portfolio 🌐](https://ronaldzamora.vercel.app/)
 - [CV 📄](https://ronaldzamora.vercel.appv/resume)
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objective
 
-Busco integrarme a equipos dinámicos y colaborativos donde pueda aportar mi visión estratégica, compromiso con la excelencia técnica y pasión por la innovación para impulsar proyectos digitales de alto impacto.
+I'm eager to join dynamic, collaborative teams where I can contribute my strategic vision, technical excellence, and passion for innovation to drive high-impact digital projects.
 
 ---
 
-¡Gracias por visitar mi perfil! Si te interesa conocer más o trabajar en conjunto, no dudes en contactarme. 😊
+Thanks for visiting my profile! If you'd like to learn more or collaborate, feel free to reach out. 😊
