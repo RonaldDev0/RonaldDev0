@@ -55,7 +55,11 @@ export default function Hero ({ en }: { en: boolean }) {
           {buttons.map(button => (
             <Link
               key={button.text}
-              href={button.href}
+              href={
+                button.text !== 'Resume'
+                  ? button.href
+                  : (en ? `/en/${button.href}` : `/es/${button.href}`)
+              }
               target='_blank'
               aria-label={button.ariaLabel}
             >
