@@ -1,6 +1,6 @@
 import Hero from '@/components/sections/Hero'
 import Experience from '@/components/sections/Experience'
-import Projects from '@/components/sections/Projects'
+import Projects from '@/components/sections/projects/Projects'
 import Stack from '@/components/sections/Stack'
 import Education from '@/components/sections/Educations'
 import AboutMe from '@/components/sections/About_me'

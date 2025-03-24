@@ -47,7 +47,7 @@ export default function Hero ({ en }: { en: boolean }) {
         <h1 className='text-6xl font-bold' id='hero-heading'>
           Ronald Zamora
         </h1>
-        <p className='text-3xl font-bold text-primary'>
+        <p className='text-3xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent'>
           {en ? 'Software Developer' : 'Desarrollador de software'}
         </p>
         <meta name='description' content='Ronald Zamora - Software Developer portfolio. Explore my projects, experience, and skills.' />

@@ -1,4 +1,6 @@
 import { Poppins } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
 
@@ -59,6 +61,8 @@ export default function RootLayout ({ children }: Readonly<{ children: ReactNode
         `}
       >
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )

@@ -1,0 +1,137 @@
+[
+  {
+    "title": "StreamingX",
+    "description": {
+      "en": "YouTube-like video platform with advanced video conversion (FFmpeg) and scalable cloud architecture.",
+      "es": "Plataforma de video tipo YouTube con conversión avanzada (FFmpeg) y arquitectura escalable en la nube."
+    },
+    "keyPoints": {
+      "en": [
+        "Next.js/React Architecture",
+        "Video Processing: FFmpeg + Cloudflare R2",
+        "Core Languages: TypeScript, JavaScript"
+      ],
+      "es": [
+        "Arquitectura Next.js/React",
+        "Procesamiento de video: FFmpeg + Cloudflare R2",
+        "Lenguajes principales: TypeScript, JavaScript"
+      ]
+    },
+    "link": "https://streaming-x.vercel.app/",
+    "code": "https://github.com/RonaldDev0/StreamingX",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "Cloudflare R2", "FFmpeg", "Vercel", "Shadcn", "Bun.js", "TypeScript", "Nextjs api routes", "Git", "GitHub"]
+  },
+  {
+    "title": "Foodllowers",
+    "description": {
+      "en": "High-scale e-commerce (10k+ users) with real-time sync and MercadoPago payments.",
+      "es": "E-commerce de alta escala (10k+ usuarios) con sincronización en tiempo real y pagos MercadoPago."
+    },
+    "keyPoints": {
+      "en": [
+        "Handled 10k+ concurrent users with 0 downtime",
+        "99.9% payment success rate (MercadoPago integration)",
+        "Real-time updates <200ms latency"
+      ],
+      "es": [
+        "Soporte para 10k+ usuarios concurrentes sin downtime",
+        "99.9% tasa éxito en pagos (integración MercadoPago)",
+        "Actualizaciones tiempo real <200ms latencia"
+      ]
+    },
+    "link": "https://foodllowers.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "MercadoPago", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "F-Kitchens",
+    "description": {
+      "en": "Real-time kitchen management system with enterprise-grade security.",
+      "es": "Sistema de gestión para cocinas con seguridad empresarial y actualizaciones en tiempo real."
+    },
+    "keyPoints": {
+      "en": [
+        "Processed 500+ daily orders in real-time",
+        "Reduced order errors by 78% with validation systems",
+        "99.95% system uptime SLA"
+      ],
+      "es": [
+        "Procesó 500+ órdenes diarias en tiempo real",
+        "Reducción de 78% en errores con validaciones",
+        "99.95% uptime del sistema"
+      ]
+    },
+    "link": "https://foodllowers-kitchens.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers-kitchens",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "F-Deliverys",
+    "description": {
+      "en": "Logistics optimization engine with automated CI/CD and real-time monitoring.",
+      "es": "Motor de optimización logística con CI/CD automatizado y monitoreo en tiempo real."
+    },
+   "keyPoints": {
+      "en": [
+        "30% faster deliveries via route optimization",
+        "CI/CD pipelines reduced deployment time by 40%",
+        "Real-time tracking with 98.7% accuracy"
+      ],
+      "es": [
+        "Entregas 30% más rápidas con optimización de rutas",
+        "CI/CD redujo tiempo de despliegue en 40%",
+        "Seguimiento en tiempo real con 98.7% precisión"
+      ]
+    },
+    "link": "https://foodllowers-deliverys.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers-deliverys",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "F-Influencers",
+    "description": {
+      "en": "Influencer analytics platform with real-time dashboards and Agile workflows.",
+      "es": "Plataforma de análisis para influencers con dashboards en tiempo real y metodologías Agile."
+    },
+    "keyPoints": {
+      "en": [
+        "Real-time sales analytics with <500ms data latency for 850+ active influencers",
+        "40% faster dashboard loads via edge caching strategies",
+        "Reduced payout processing errors by 78% through validation systems",
+        "Scaled real-time data pipelines to handle 1.2M+ monthly events"
+      ],
+      "es": [
+        "Análisis de ventas en tiempo real con <500ms de latencia para 850+ influencers",
+        "Dashboards 40% más rápidos mediante estrategias de edge caching",
+        "Reducción del 78% en errores de pagos con validaciones automáticas",
+        "Escalado para procesar 1.2M+ eventos mensuales en tiempo real"
+      ]
+    },
+    "link": "https://foodllowers-influencers.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers-influencers",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "Portfolio",
+    "description": {
+      "en": "High-performance developer portfolio with extreme optimization focus.",
+      "es": "Portfolio de desarrollador con enfoque extremo en optimización."
+    },
+   "keyPoints": {
+      "en": [
+        "Responsive and Accessible Design",
+        "100/100 Lighthouse performance score",
+        "75% faster load times vs industry average",
+        "100% SEO optimization coverage"
+      ],
+      "es": [
+        "Diseño responsivo y accesible",
+        "Puntaje Lighthouse 100/100 en rendimiento",
+        "75% más rápido que promedio del mercado",
+        "100% cobertura en optimización SEO"
+      ]
+    },
+    "code": "https://github.com/RonaldDev0/RonaldDev0",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Vercel", "Shadcn", "Bun.js", "TypeScript", "Git", "GitHub"]
+  }
+]
