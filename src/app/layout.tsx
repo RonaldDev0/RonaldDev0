@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ronaldzamora.vercel.app/'),
   openGraph: {
     title: 'Ronald Zamora | Software Developer',
-    description: '...',
+    description:
+      'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
     url: 'https://ronaldzamora.vercel.app/',
     siteName: 'Ronald Zamora | Software Developer',
     images: [
