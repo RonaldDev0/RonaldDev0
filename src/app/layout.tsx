@@ -19,13 +19,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ronaldzamora.vercel.app/'),
   openGraph: {
     title: 'Ronald Zamora | Software Developer',
-    description:
-      'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
+    description: '...',
     url: 'https://ronaldzamora.vercel.app/',
     siteName: 'Ronald Zamora | Software Developer',
     images: [
       {
-        url: '/preview.webp',
+        url: 'https://ronaldzamora.vercel.app/preview.webp',
         width: 1200,
         height: 630,
         alt: 'Ronald Zamora | Software Developer'
@@ -37,9 +36,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ronald Zamora | Software Developer',
-    description: 'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
+    description:
+      'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
     creator: '@RonaldDev0',
-    images: ['/preview.webp']
+    images: ['https://ronaldzamora.vercel.app/preview.webp']
   },
   authors: [{ name: 'Ronald Zamora', url: 'https://ronaldzamora.vercel.app/' }],
   keywords: [
