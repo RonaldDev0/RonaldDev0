@@ -15,7 +15,32 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Ronald Zamora | Software Developer',
   description:
-    'Soy Ronald Zamora, un apasionado Software Developer especializado en desarrollar aplicaciones web modernas y escalables. Me encanta trabajar con tecnologías de vanguardia y compartir mis proyectos y aprendizajes.',
+    'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
+  metadataBase: new URL('https://ronaldzamora.vercel.app/'),
+  openGraph: {
+    title: 'Ronald Zamora | Software Developer',
+    description:
+      'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
+    url: 'https://ronaldzamora.vercel.app/',
+    siteName: 'Ronald Zamora | Software Developer',
+    images: [
+      {
+        url: '/preview.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Ronald Zamora | Software Developer'
+      }
+    ],
+    type: 'website',
+    locale: 'en_US'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ronald Zamora | Software Developer',
+    description: 'I\'m Ronald Zamora, a passionate software developer specializing in developing modern, scalable web applications. I love working with cutting-edge technologies and sharing my projects and learnings.',
+    creator: '@RonaldDev0',
+    images: ['/preview.webp']
+  },
   authors: [{ name: 'Ronald Zamora', url: 'https://ronaldzamora.vercel.app/' }],
   keywords: [
     'Software Developer',
@@ -25,7 +50,11 @@ export const metadata: Metadata = {
     'TypeScript',
     'React',
     'Next.js',
+    'Next',
     'Node.js',
+    'Node',
+    'Bun.js',
+    'Bun',
     'SQL',
     'REST API',
     'HTML5',
