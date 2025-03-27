@@ -10,14 +10,13 @@ export default async function Home ({ params }: any) {
   const lang = await resolvedParams.lang
   const en = lang === 'en'
 
+  const components = [Hero, Experience, Projects, Stack, Education, AboutMe]
+
   return (
     <main className='w-full flex flex-col items-center'>
-      <Hero en={en} />
-      <Experience en={en} />
-      <Projects en={en} />
-      <Stack en={en} />
-      <Education en={en} />
-      <AboutMe en={en} />
+      {components.map((Component, index) => (
+        <Component en={en} key={index} />
+      ))}
     </main>
   )
 }
