@@ -4,6 +4,7 @@ import Projects from '@/components/sections/projects/Projects'
 import Stack from '@/components/sections/Stack'
 import Education from '@/components/sections/Educations'
 import AboutMe from '@/components/sections/About_me'
+import ScrollAnimationWrapper from '@/components/ScrollAnimationWrapper'
 
 export default async function Home ({ params }: any) {
   const resolvedParams = await Promise.resolve(params)
@@ -15,7 +16,9 @@ export default async function Home ({ params }: any) {
   return (
     <main className='w-full flex flex-col items-center'>
       {components.map((Component, index) => (
-        <Component en={en} key={index} />
+        <ScrollAnimationWrapper key={index}>
+          <Component en={en} />
+        </ScrollAnimationWrapper>
       ))}
     </main>
   )
