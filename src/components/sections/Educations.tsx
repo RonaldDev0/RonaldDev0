@@ -80,7 +80,7 @@ export default function Education ({ en }: { en: boolean }) {
   return (
     <section id='education' className='w-full flex flex-col gap-6 mb-32'>
       <h2 className='text-3xl font-bold mt-10'>
-        {en ? 'Educación' : 'Educación'}
+        {en ? 'Education' : 'Educación'}
       </h2>
       <CardDescription>
         {
