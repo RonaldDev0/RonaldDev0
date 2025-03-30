@@ -41,15 +41,17 @@ export default function Hero ({ en }: { en: boolean }) {
     >
       <Lang en={en} />
       <div className='space-y-6'>
-        <p className='text-6xl font-bold opacity-0 animate-fade-in [animation-delay:100ms] [animation-timing-function:cubic-bezier(0.25,0.1,0.25,1)]'>
-          {en ? 'I\'m' : 'Soy'}
-        </p>
-        <h1 className='text-6xl font-bold opacity-0 animate-fade-in [animation-delay:200ms] [animation-timing-function:cubic-bezier(0.25,0.1,0.25,1)]' id='hero-heading'>
-          Ronald Zamora
-        </h1>
-        <p className='text-3xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent opacity-0 animate-scale-in [animation-delay:300ms]'>
-          {en ? 'Software Developer' : 'Desarrollador de software'}
-        </p>
+        <div className='max-[1000px]:pl-4'>
+          <p className='text-6xl font-bold opacity-0 animate-fade-in [animation-delay:100ms] [animation-timing-function:cubic-bezier(0.25,0.1,0.25,1)]'>
+            {en ? 'I\'m' : 'Soy'}
+          </p>
+          <h1 className='text-6xl font-bold opacity-0 animate-fade-in [animation-delay:200ms] [animation-timing-function:cubic-bezier(0.25,0.1,0.25,1)]' id='hero-heading'>
+            Ronald Zamora
+          </h1>
+          <p className='text-3xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent opacity-0 animate-scale-in [animation-delay:300ms]'>
+            {en ? 'Software Developer' : 'Desarrollador de software'}
+          </p>
+        </div>
         <meta name='description' content='Ronald Zamora - Software Developer portfolio. Explore my projects, experience, and skills.' />
         <div className='space-x-2 flex opacity-0 animate-slide-in [animation-delay:400ms]'>
           {buttons.map(button => (
