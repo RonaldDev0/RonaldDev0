@@ -19,7 +19,7 @@
     },
     "link": "https://streaming-x.vercel.app/",
     "code": "https://github.com/RonaldDev0/StreamingX",
-    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "Cloudflare R2", "FFmpeg", "Vercel", "Shadcn", "Bun.js", "TypeScript", "Nextjs api routes", "Git", "GitHub"]
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "Cloudflare R2", "FFmpeg", "Vercel", "HeroUI", "Bun.js", "TypeScript", "Nextjs api routes", "Git", "GitHub"]
   },
   {
     "title": "Foodllowers",
