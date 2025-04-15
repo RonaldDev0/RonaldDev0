@@ -127,7 +127,7 @@ const Hero = memo(function Hero ({ en }: { en: boolean }) {
       <div className='absolute bottom-12 max-[1000px]:hidden w-full flex justify-center'>
         <Link
           href='#experience'
-          className='min-h-[44px] min-w-[44px]'
+          className='min-h-[44px] min-w-[44px] flex items-center gap-6'
           aria-label={en ? 'Scroll to experience section' : 'Desplazarse a la sección de experiencia'}
           prefetch={false}
         >
