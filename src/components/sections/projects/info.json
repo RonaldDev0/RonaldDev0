@@ -95,13 +95,13 @@
     },
     "keyPoints": {
       "en": [
-        "Real-time sales analytics with <500ms data latency for 850+ active influencers",
+        "Real-time sales analytics with <500ms data latency",
         "40% faster dashboard loads via edge caching strategies",
         "Reduced payout processing errors by 78% through validation systems",
         "Scaled real-time data pipelines to handle 1.2M+ monthly events"
       ],
       "es": [
-        "Análisis de ventas en tiempo real con <500ms de latencia para 850+ influencers",
+        "Análisis de ventas en tiempo real con <500ms de latencia",
         "Dashboards 40% más rápidos mediante estrategias de edge caching",
         "Reducción del 78% en errores de pagos con validaciones automáticas",
         "Escalado para procesar 1.2M+ eventos mensuales en tiempo real"
