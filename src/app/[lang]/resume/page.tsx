@@ -1,4 +1,6 @@
-export default function Resume ({ params: { lang } }: any) {
+export default async function Resume ({ params }: any) {
+  const resolvedParams = await Promise.resolve(params)
+  const lang = await resolvedParams.lang
   const en = lang === 'en'
   return (
     <div className='w-screen h-screen fixed top-0 left-0'>

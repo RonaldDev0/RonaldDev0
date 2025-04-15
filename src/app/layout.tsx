@@ -1,16 +1,29 @@
 import { Poppins } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
+import Script from 'next/script'
 
 import './globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 
 const poppins = Poppins({
   weight: ['400', '500', '700'],
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  variable: '--font-poppins',
+  fallback: ['system-ui', 'arial']
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: true,
+  interactiveWidget: 'resizes-content'
+}
 
 export const metadata: Metadata = {
   title: 'Ronald Zamora | Software Developer',
@@ -82,6 +95,36 @@ export const metadata: Metadata = {
 export default function RootLayout ({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='en' className='dark'>
+      <head>
+        <link
+          rel='preload'
+          href='/personal/foto.webp'
+          as='image'
+          type='image/webp'
+          fetchPriority='high'
+        />
+        <link
+          rel='preload'
+          href='/icons/linkedin.svg'
+          as='image'
+          type='image/svg+xml'
+          fetchPriority='low'
+        />
+        <link
+          rel='preload'
+          href='/icons/github.svg'
+          as='image'
+          type='image/svg+xml'
+          fetchPriority='low'
+        />
+        <link
+          rel='preload'
+          href='/icons/file.svg'
+          as='image'
+          type='image/svg+xml'
+          fetchPriority='low'
+        />
+      </head>
       <body
         className={`
           ${poppins.className} ${poppins.style}antialiased
@@ -91,6 +134,19 @@ export default function RootLayout ({ children }: Readonly<{ children: ReactNode
         `}
       >
         {children}
+        <Script
+          src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
+          strategy='afterInteractive'
+          defer
+        />
+        <Script id='google-analytics' strategy='afterInteractive' defer>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
         <SpeedInsights />
         <Analytics />
       </body>

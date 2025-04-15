@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Suspense } from 'react'
+import { Suspense, memo } from 'react'
 import Lang from '@/components/Lang'
 
 type IButton = {
@@ -32,7 +32,7 @@ const buttons: IButton[] = [
   }
 ]
 
-export default function Hero ({ en }: { en: boolean }) {
+const Hero = memo(function Hero ({ en }: { en: boolean }) {
   return (
     <section
       id='hero'
@@ -65,6 +65,7 @@ export default function Hero ({ en }: { en: boolean }) {
               target='_blank'
               aria-label={button.ariaLabel}
               className='scroll-smooth'
+              prefetch={false}
             >
               <Button
                 variant='outline'
@@ -79,6 +80,8 @@ export default function Hero ({ en }: { en: boolean }) {
                   alt={button.text}
                   priority
                   className='opacity-0 animate-icon-pop [animation-delay:500ms]'
+                  loading='eager'
+                  fetchPriority='high'
                 />
                 {button.text}
               </Button>
@@ -86,7 +89,7 @@ export default function Hero ({ en }: { en: boolean }) {
           ))}
         </div>
       </div>
-      <Suspense fallback={<div className='w-[300px] h-[300px] rounded-full bg-background' />}>
+      <Suspense fallback={<div className='w-[300px] h-[300px] rounded-full bg-background animate-pulse' />}>
         <Image
           src='/personal/foto.webp'
           width={300}
@@ -94,6 +97,10 @@ export default function Hero ({ en }: { en: boolean }) {
           alt='Ronald Zamora - Software Developer'
           priority
           className='rounded-full border-4 border-primary opacity-0 animate-image-enter [animation-delay:300ms]'
+          loading='eager'
+          quality={90}
+          fetchPriority='high'
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         />
       </Suspense>
       <div className='absolute bottom-12 max-[1000px]:hidden w-full flex justify-center'>
@@ -101,6 +108,7 @@ export default function Hero ({ en }: { en: boolean }) {
           href='#experience'
           className='flex items-center gap-1.5 opacity-0 animate-fade-in [animation-delay:1000ms]'
           aria-label='Scroll to experience section'
+          prefetch={false}
         >
           <p className='text-primary text-lg font-bold'>
             {en ? 'Experience' : 'Experiencia'}
@@ -111,9 +119,15 @@ export default function Hero ({ en }: { en: boolean }) {
             height={27}
             alt='Arrow pointing down'
             className='animate-soft-bounce'
+            loading='eager'
+            fetchPriority='high'
           />
         </Link>
       </div>
     </section>
   )
-}
+})
+
+Hero.displayName = 'Hero'
+
+export default Hero

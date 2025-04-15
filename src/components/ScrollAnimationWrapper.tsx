@@ -1,53 +1,52 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback, memo } from 'react'
 
-export default function ScrollAnimationWrapper ({
+const ScrollAnimationWrapper = memo(({
   children
 }: {
   children: React.ReactNode
-}) {
+}) => {
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove(
-              'opacity-0',
-              'translate-y-6',
-              'scale-95'
-            )
-            entry.target.classList.add(
-              'opacity-100',
-              'translate-y-0',
-              'scale-100'
-            )
-          } else {
-            entry.target.classList.remove(
-              'opacity-100',
-              'translate-y-0',
-              'scale-100'
-            )
-            entry.target.classList.add(
-              'opacity-0',
-              'translate-y-6',
-              'scale-95'
-            )
-          }
-        })
-      },
-      {
-        threshold: 0.05,
-        rootMargin: '0px 0px -50px 0px'
+  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove(
+          'opacity-0',
+          'translate-y-6',
+          'scale-95'
+        )
+        entry.target.classList.add(
+          'opacity-100',
+          'translate-y-0',
+          'scale-100'
+        )
+      } else {
+        entry.target.classList.remove(
+          'opacity-100',
+          'translate-y-0',
+          'scale-100'
+        )
+        entry.target.classList.add(
+          'opacity-0',
+          'translate-y-6',
+          'scale-95'
+        )
       }
-    )
+    })
+  }, [])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px'
+    })
 
     if (ref.current) observer.observe(ref.current)
 
     return () => observer.disconnect()
-  }, [])
+  }, [handleIntersection])
 
   return (
     <div
@@ -70,4 +69,8 @@ export default function ScrollAnimationWrapper ({
       {children}
     </div>
   )
-}
+})
+
+ScrollAnimationWrapper.displayName = 'ScrollAnimationWrapper'
+
+export default ScrollAnimationWrapper

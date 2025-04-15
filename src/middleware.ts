@@ -12,12 +12,17 @@ export function middleware (req: NextRequest) {
     return NextResponse.next()
   }
 
-  const langHeader = headers.get('accept-language')?.toLowerCase() || DEFAULT_LANG
-  const detectedLang = langHeader.includes('es') ? 'es' : DEFAULT_LANG
+  const acceptLanguage = headers.get('accept-language')?.toLowerCase() || DEFAULT_LANG
+  const detectedLang = acceptLanguage.includes('es') ? 'es' : DEFAULT_LANG
 
   url.pathname = `/${detectedLang}${pathname}`
   const response = NextResponse.redirect(url)
   response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
+  response.headers.set('Vary', 'Accept-Language')
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-XSS-Protection', '1; mode=block')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
   return response
 }
 
