@@ -20,7 +20,7 @@ const poppins = Poppins({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
   userScalable: true,
   interactiveWidget: 'resizes-content'
 }
@@ -93,58 +93,33 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout ({ children }: Readonly<{ children: ReactNode }>) {
+
   return (
     <html lang='en' className='dark'>
-      <head>
-        <link
-          rel='preload'
-          href='/personal/foto.webp'
-          as='image'
-          type='image/webp'
-          fetchPriority='high'
-        />
-        <link
-          rel='preload'
-          href='/icons/linkedin.svg'
-          as='image'
-          type='image/svg+xml'
-          fetchPriority='low'
-        />
-        <link
-          rel='preload'
-          href='/icons/github.svg'
-          as='image'
-          type='image/svg+xml'
-          fetchPriority='low'
-        />
-        <link
-          rel='preload'
-          href='/icons/file.svg'
-          as='image'
-          type='image/svg+xml'
-          fetchPriority='low'
-        />
-      </head>
+      <head />
       <body
         className={`
           ${poppins.className} ${poppins.style}antialiased
           min-[1600px]:px-96
           max-[1600px]:px-32
           max-[700px]:px-6
+          bg-background text-foreground
         `}
       >
         {children}
         <Script
           src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
-          strategy='afterInteractive'
+          strategy='lazyOnload'
           defer
         />
-        <Script id='google-analytics' strategy='afterInteractive' defer>
+        <Script id='google-analytics' strategy='lazyOnload' defer>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+            gtag('config', 'G-XXXXXXXXXX', {
+              send_page_view: false
+            });
           `}
         </Script>
         <SpeedInsights />

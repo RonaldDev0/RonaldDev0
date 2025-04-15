@@ -2,59 +2,105 @@
 
 import { useEffect, useRef, useCallback, memo } from 'react'
 
-const ScrollAnimationWrapper = memo(({
-  children
-}: {
+interface ScrollAnimationWrapperProps {
   children: React.ReactNode
-}) => {
+  priority?: boolean
+}
+
+const ScrollAnimationWrapper = memo(({
+  children,
+  priority = false
+}: ScrollAnimationWrapperProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.remove(
-          'opacity-0',
-          'translate-y-6',
-          'scale-95'
-        )
-        entry.target.classList.add(
-          'opacity-100',
-          'translate-y-0',
-          'scale-100'
-        )
-      } else {
-        entry.target.classList.remove(
-          'opacity-100',
-          'translate-y-0',
-          'scale-100'
-        )
-        entry.target.classList.add(
-          'opacity-0',
-          'translate-y-6',
-          'scale-95'
-        )
+        requestAnimationFrame(() => {
+          entry.target.classList.remove(
+            'opacity-0',
+            'translate-y-6',
+            'scale-95'
+          )
+          entry.target.classList.add(
+            'opacity-100',
+            'translate-y-0',
+            'scale-100'
+          )
+          entry.target.setAttribute('aria-hidden', 'false')
+
+          // Restaurar la tabulación de los elementos focusables
+          const focusableElements = entry.target.querySelectorAll(
+            'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+          )
+          focusableElements.forEach(el => {
+            if (el instanceof HTMLElement) {
+              el.tabIndex = 0
+            }
+          })
+        })
+      } else if (!priority) {
+        requestAnimationFrame(() => {
+          entry.target.classList.remove(
+            'opacity-100',
+            'translate-y-0',
+            'scale-100'
+          )
+          entry.target.classList.add(
+            'opacity-0',
+            'translate-y-6',
+            'scale-95'
+          )
+          entry.target.setAttribute('aria-hidden', 'true')
+
+          // Remover de la tabulación los elementos focusables
+          const focusableElements = entry.target.querySelectorAll(
+            'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+          )
+          focusableElements.forEach(el => {
+            if (el instanceof HTMLElement) {
+              el.tabIndex = -1
+            }
+          })
+        })
       }
     })
-  }, [])
+  }, [priority])
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.05,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: priority ? 0 : 0.05,
+      rootMargin: priority ? '0px' : '0px 0px -50px 0px'
     })
 
-    if (ref.current) observer.observe(ref.current)
+    const currentRef = ref.current
+    if (currentRef) {
+      observer.observe(currentRef)
 
-    return () => observer.disconnect()
-  }, [handleIntersection])
+      // Configuración inicial de elementos focusables
+      if (!priority) {
+        const focusableElements = currentRef.querySelectorAll(
+          'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
+        )
+        focusableElements.forEach(el => {
+          if (el instanceof HTMLElement) {
+            el.tabIndex = -1
+          }
+        })
+      }
+    }
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef)
+      observer.disconnect()
+    }
+  }, [handleIntersection, priority])
 
   return (
     <div
       ref={ref}
-      className='
-        opacity-0
-        translate-y-6
-        scale-95
+      className={`
+        ${priority ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}
         transition-all
         duration-300
         ease-out
@@ -64,7 +110,10 @@ const ScrollAnimationWrapper = memo(({
         motion-reduce:translate-y-0
         motion-reduce:scale-100
         w-full
-      '
+      `}
+      aria-hidden={!priority}
+      role='region'
+      aria-live={priority ? 'polite' : 'off'}
     >
       {children}
     </div>

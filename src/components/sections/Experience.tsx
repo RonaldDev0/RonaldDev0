@@ -2,17 +2,17 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 
 export default function Experience ({ en }: { en: boolean }) {
   return (
-    <section id='experience' aria-label='experience' className='space-y-4 pt-24 mb-32'>
-      <Card>
+    <section id='experience' aria-label='experience' className='space-y-8 pt-24 mb-32'>
+      <Card className='bg-card text-card-foreground shadow-lg'>
         <CardHeader>
-          <CardTitle>
+          <CardTitle className='text-2xl font-bold text-foreground'>
             {en ? 'Experience' : 'Experiencia' }
           </CardTitle>
-          <CardDescription>
+          <CardDescription className='text-muted-foreground'>
             {en ? 'Software Developer' : 'Desarrollador de software'}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className='text-foreground/90'>
           <p>
             {
               en
@@ -27,7 +27,7 @@ export default function Experience ({ en }: { en: boolean }) {
             }
           </p>
         </CardContent>
-        <CardFooter>
+        <CardFooter className='text-foreground/90'>
           <p>
             {
               en

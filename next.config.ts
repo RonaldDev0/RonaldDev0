@@ -11,9 +11,9 @@ const nextConfig: NextConfig = {
       }
     ],
     formats: ['image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: 'default-src \'self\'; script-src \'none\'; sandbox;'
   },
@@ -25,7 +25,14 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@radix-ui/react-slot', '@radix-ui/react-switch', 'lucide-react']
+    optimizePackageImports: [
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      'lucide-react',
+      '@vercel/analytics',
+      '@vercel/speed-insights'
+    ],
+    webVitalsAttribution: ['CLS', 'LCP']
   },
   headers: async () => {
     return [
@@ -54,7 +61,33 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/fonts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
           }
         ]
       }

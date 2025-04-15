@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Suspense, memo } from 'react'
+import { Suspense, memo, useEffect } from 'react'
 import Lang from '@/components/Lang'
+import SocialIconsPreload from '@/components/SocialIconsPreload'
 
 type IButton = {
   text: string,
@@ -33,12 +34,28 @@ const buttons: IButton[] = [
 ]
 
 const Hero = memo(function Hero ({ en }: { en: boolean }) {
+  useEffect(() => {
+    // Precargar la imagen principal cuando el componente está en el viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = document.createElement('img')
+          img.src = '/personal/foto.webp'
+          observer.disconnect()
+        }
+      })
+    })
+
+    observer.observe(document.getElementById('hero-image')!)
+  }, [])
+
   return (
     <section
       id='hero'
       aria-label='hero'
       className='w-full flex max-[1000px]:flex-col-reverse items-center min-[1000px]:justify-between max-[700px]:gap-20 min-[1000px]:h-screen max-[1000px]:my-12 relative'
     >
+      <SocialIconsPreload />
       <Lang en={en} />
       <div className='space-y-6'>
         <div className='max-[1000px]:pl-4'>
@@ -64,50 +81,54 @@ const Hero = memo(function Hero ({ en }: { en: boolean }) {
               }
               target='_blank'
               aria-label={button.ariaLabel}
-              className='scroll-smooth'
+              className='scroll-smooth min-h-[44px] min-w-[44px]'
               prefetch={false}
             >
               <Button
                 variant='outline'
                 size='lg'
-                className='text-lg flex gap-4 p-4'
+                className='min-h-[44px] min-w-[44px]'
                 tabIndex={-1}
               >
                 <Image
                   src={button.img}
                   width={25}
                   height={25}
-                  alt={button.text}
+                  alt=''
+                  aria-hidden='true'
                   priority
                   className='opacity-0 animate-icon-pop [animation-delay:500ms]'
                   loading='eager'
                   fetchPriority='high'
                 />
-                {button.text}
+                <span className='sr-only'>{button.text}</span>
+                <span>{button.text}</span>
               </Button>
             </Link>
           ))}
         </div>
       </div>
       <Suspense fallback={<div className='w-[300px] h-[300px] rounded-full bg-background animate-pulse' />}>
-        <Image
-          src='/personal/foto.webp'
-          width={300}
-          height={300}
-          alt='Ronald Zamora - Software Developer'
-          priority
-          className='rounded-full border-4 border-primary opacity-0 animate-image-enter [animation-delay:300ms]'
-          loading='eager'
-          quality={90}
-          fetchPriority='high'
-          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-        />
+        <div id='hero-image'>
+          <Image
+            src='/personal/foto.webp'
+            width={300}
+            height={300}
+            alt={en ? 'Ronald Zamora - Software Developer' : 'Ronald Zamora - Desarrollador de software'}
+            priority
+            className='rounded-full border-4 border-primary opacity-0 animate-image-enter [animation-delay:300ms]'
+            loading='eager'
+            quality={75}
+            fetchPriority='high'
+            sizes='(max-width: 768px) 200px, (max-width: 1200px) 250px, 300px'
+          />
+        </div>
       </Suspense>
       <div className='absolute bottom-12 max-[1000px]:hidden w-full flex justify-center'>
         <Link
           href='#experience'
-          className='flex items-center gap-1.5 opacity-0 animate-fade-in [animation-delay:1000ms]'
-          aria-label='Scroll to experience section'
+          className='min-h-[44px] min-w-[44px]'
+          aria-label={en ? 'Scroll to experience section' : 'Desplazarse a la sección de experiencia'}
           prefetch={false}
         >
           <p className='text-primary text-lg font-bold'>
@@ -117,7 +138,8 @@ const Hero = memo(function Hero ({ en }: { en: boolean }) {
             src='/icons/arrow-down.svg'
             width={27}
             height={27}
-            alt='Arrow pointing down'
+            alt=''
+            aria-hidden='true'
             className='animate-soft-bounce'
             loading='eager'
             fetchPriority='high'
