@@ -51,6 +51,8 @@ export default function AboutMe ({ en }: { en: boolean }) {
                 alt='Ronald Zamora - Software Developer'
                 priority
                 className='rounded-full border-4 border-primary'
+                placeholder='blur'
+                blurDataURL='data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICwAAACwAgCdASoEAAQAAVAfJZgCdAD0oJaQAA/vuUAAA=='
               />
             </Suspense>
           </div>

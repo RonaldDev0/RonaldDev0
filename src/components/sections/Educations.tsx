@@ -124,6 +124,7 @@ export default function Education ({ en }: { en: boolean }) {
                   height={60}
                   alt={item.img}
                   className='rounded-full'
+                  loading='lazy'
                 />
                 <p className='text-sm'>
                   {item.name}

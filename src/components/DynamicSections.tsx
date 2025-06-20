@@ -18,27 +18,27 @@ const Hero = dynamic(() => import('@/components/sections/Hero').then(mod => mod.
 
 const Experience = dynamic(() => import('@/components/sections/Experience').then(mod => mod.default), {
   loading: () => <LoadingPlaceholder height='h-[500px]' />,
-  ssr: true
+  ssr: false
 })
 
 const Projects = dynamic(() => import('@/components/sections/projects/Projects').then(mod => mod.default), {
   loading: () => <LoadingPlaceholder height='h-[800px]' />,
-  ssr: true
+  ssr: false
 })
 
 const Stack = dynamic(() => import('@/components/sections/Stack').then(mod => mod.default), {
   loading: () => <LoadingPlaceholder height='h-[400px]' />,
-  ssr: true
+  ssr: false
 })
 
 const Education = dynamic(() => import('@/components/sections/Educations').then(mod => mod.default), {
   loading: () => <LoadingPlaceholder height='h-[600px]' />,
-  ssr: true
+  ssr: false
 })
 
 const AboutMe = dynamic(() => import('@/components/sections/About_me').then(mod => mod.default), {
   loading: () => <LoadingPlaceholder height='h-[400px]' />,
-  ssr: true
+  ssr: false
 })
 
 const components = [

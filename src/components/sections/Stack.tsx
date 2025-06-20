@@ -88,6 +88,7 @@ export default function Stack ({ en }: { en: boolean }) {
                       width='50'
                       height='50'
                       className='w-[50px] h-[50px]'
+                      loading='lazy'
                     />
                     <p className='text-sm'>
                       {name}

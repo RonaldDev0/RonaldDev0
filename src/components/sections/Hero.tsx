@@ -121,6 +121,8 @@ const Hero = memo(function Hero ({ en }: { en: boolean }) {
             quality={75}
             fetchPriority='high'
             sizes='(max-width: 768px) 200px, (max-width: 1200px) 250px, 300px'
+            placeholder='blur'
+            blurDataURL='data:image/webp;base64,UklGRiIAAABXRUJQVlA4ICwAAACwAgCdASoEAAQAAVAfJZgCdAD0oJaQAA/vuUAAA=='
           />
         </div>
       </Suspense>
@@ -129,7 +131,6 @@ const Hero = memo(function Hero ({ en }: { en: boolean }) {
           href='#experience'
           className='min-h-[44px] min-w-[44px] flex items-center gap-6'
           aria-label={en ? 'Scroll to experience section' : 'Desplazarse a la sección de experiencia'}
-          prefetch={false}
         >
           <p className='text-primary text-lg font-bold'>
             {en ? 'Experience' : 'Experiencia'}
