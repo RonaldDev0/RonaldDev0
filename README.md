@@ -1,48 +1,54 @@
-# Astro Starter Kit: Basics
+# Hello, I'm Ronald Zamora! 👨‍💻
 
-```sh
-bun create astro@latest -- --template basics
-```
+I'm a self-taught Software Engineer and Full-Stack Web Developer with a passion for turning ideas into innovative, scalable digital solutions. I've independently developed high-impact projects that showcase my ability to manage complex initiatives from start to finish.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Featured Projects
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+### 🎥 Streamingx
+A **streaming platform** similar to YouTube, built with **Next.js** and **Tailwind CSS**. I implemented **API Routes** for seamless internal communication, using **Supabase** as the database and **Cloudflare R2** to efficiently host and serve videos at scale.
 
-## 🚀 Project Structure
+### 🍽️ Foodllowers
+An **innovative ecosystem** akin to Rappi that leverages influencers to boost sales. I developed multiple specialized **PWAs**—one for customers, one for influencers, one for kitchens, and one for delivery personnel—all connected via a robust backend implemented with **Supabase**. The solution also integrates **MercadoPago** for payment processing and **Google Maps APIs** to optimize routes and maps.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 💻 Tech Stack
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+**Frontend:**
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+- ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+- ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 
-## 🧞 Commands
+**Backend:**
+- ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
+- API Routes
+- ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 
-All commands are run from the root of the project, from a terminal:
+**Others:**
+- ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+- ![MercadoPago](https://img.shields.io/badge/MercadoPago-00B3E6?style=flat-square&logo=mercadopago&logoColor=white)
+- ![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?style=flat-square&logo=google-maps&logoColor=white)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 📫 Connect with Me
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [LinkedIn 🔗](https://www.linkedin.com/in/ronald-zamora-524094353/)
+- [Portfolio 🌐](https://ronaldzamora.vercel.app/)
+- [CV 📄](https://ronaldzamora.vercel.appv/resume)
+
+---
+
+## 🎯 Objective
+
+I'm eager to join dynamic, collaborative teams where I can contribute my strategic vision, technical excellence, and passion for innovation to drive high-impact digital projects.
+
+---
+
+Thanks for visiting my profile! If you'd like to learn more or collaborate, feel free to reach out. 😊

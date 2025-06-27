@@ -1,0 +1,105 @@
+---
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card'
+
+type IEducation = {
+  name: string,
+  img: string,
+  link: string
+}
+
+const education: IEducation[] = [
+  {
+    name: 'Platzi',
+    img: '/education/platzi.svg',
+    link: 'https://www.youtube.com/@Platzi'
+  },
+  {
+    name: 'Midudev',
+    img: '/education/midudev.svg',
+    link: 'https://www.youtube.com/@midudev'
+  },
+  {
+    name: 'Sonny Sangha',
+    img: '/education/sonny-sangha.webp',
+    link: 'https://www.youtube.com/@SonnySangha'
+  },
+  {
+    name: 'Dot CSV',
+    img: '/education/dot-csv.webp',
+    link: 'https://www.youtube.com/@DotCSV'
+  },
+  {
+    name: 'Gentleman Programming',
+    img: '/education/gentleman-programming.webp',
+    link: 'https://www.youtube.com/@gentlemanprogramming'
+  },
+  {
+    name: 'MoureDev',
+    img: '/education/mouredev.webp',
+    link: 'https://www.youtube.com/@mouredevtv'
+  },
+  {
+    name: 'Fazt',
+    img: '/education/fazt.webp',
+    link: 'https://www.youtube.com/@FaztTech'
+  },
+  {
+    name: 'aaronga97',
+    img: '/education/aaronga97.webp',
+    link: 'https://www.youtube.com/@aaronga97'
+  },
+  {
+    name: 'EDteam',
+    img: '/education/edteam.webp',
+    link: 'https://www.youtube.com/@EDteam'
+  },
+  {
+    name: 'Diegoveloper',
+    img: '/education/diegoveloper.webp',
+    link: 'https://www.youtube.com/@diegoveloper'
+  },
+  {
+    name: 'Absa Coding',
+    img: '/education/absa-coding.webp',
+    link: 'https://www.youtube.com/@AbsaCoding'
+  },
+  {
+    name: 'Carlos Azaustre',
+    img: '/education/carlos-azaustre.webp',
+    link: 'https://www.youtube.com/@CarlosAzaustre'
+  },
+  {
+    name: 'Nate Gentile',
+    img: '/education/nate-gentile.webp',
+    link: 'https://www.youtube.com/@NateGentile7'
+  }
+]
+---
+
+<section id='education'>
+  <h2>Education</h2>
+  <CardDescription>
+    Throughout my training as a self-taught developer, YouTube has been my main ally.
+    <br />
+    For years I have absorbed knowledge from multiple specialized channels, which has allowed me to master new technologies and always stay up to date with the latest trends in software development.
+    <br />
+    Below, I highlight those resources that have marked my professional career and that I consider essential for my continued growth.
+  </CardDescription>
+  <Card>
+    <CardHeader>
+      <CardTitle>
+        <p>Featured Channels</p>
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div>
+        {education.map(item => (
+          <a href={item.link} target='_blank'>
+            <img src={item.img} class='w-[60px] h-[60px] rounded-full' />
+            <p>{item.name}</p>
+          </a>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
+</section>

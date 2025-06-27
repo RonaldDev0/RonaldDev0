@@ -1,0 +1,80 @@
+---
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../ui/card'
+import { Badge } from '../../ui/badge'
+import data from './info.json'
+
+type IProject = {
+  title: string
+  description: string
+  keyPoints: string[]
+  link?: string
+  image?: string
+  code: string
+  stack: string[]
+}
+
+const projects: IProject[] = data
+---
+
+<section id='projects'>
+  <div>
+    <h2>Projects</h2>
+    <div>
+      <p>Here are some of the projects I\'ve worked on.</p>
+      <p>The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.</p>
+    </div>
+  </div>
+
+  <div>
+    {projects.map(project => (
+      <Card>
+        <CardHeader>
+          <div>
+            <CardTitle>
+              {project.title}
+            </CardTitle>
+            <div>
+              {project.link && (
+                <a href={project.link} target='_blank'>
+                  <svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+                  </svg>
+                </a>
+              )}
+              <a href={project.code} target='_blank'>
+                <svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <CardDescription>
+            {project.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div>
+            <h3>Key Features</h3>
+            <ul>
+              {project.keyPoints.map((point, i) => (
+                <li>
+                  <svg class='w-4 h-4 mt-1 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M5 13l4 4L19 7' />
+                  </svg>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </CardContent>
+        <CardFooter>
+          {project.stack.map(tech => (
+            <Badge variant='secondary'>
+              {tech}
+            </Badge>
+          ))}
+        </CardFooter>
+      </Card>
+    ))}
+  </div>
+</section>

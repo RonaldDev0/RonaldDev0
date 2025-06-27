@@ -1,0 +1,75 @@
+[
+  {
+    "title": "StreamingX",
+    "description": "YouTube-like video platform with advanced video conversion (FFmpeg) and scalable cloud architecture.",
+    "keyPoints": [
+      "Next.js/React Architecture",
+      "Video Processing: FFmpeg + Cloudflare R2",
+      "Core Languages: TypeScript, JavaScript"
+    ],
+    "link": "https://streaming-x.vercel.app/",
+    "code": "https://github.com/RonaldDev0/StreamingX",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "Cloudflare R2", "FFmpeg", "Vercel", "HeroUI", "Bun.js", "TypeScript", "Nextjs api routes", "Git", "GitHub"]
+  },
+  {
+    "title": "Foodllowers",
+    "description": "High-scale e-commerce (10k+ users) with real-time sync and MercadoPago payments.",
+    "keyPoints": [
+      "Handled 10k+ concurrent users with 0 downtime",
+      "99.9% payment success rate (MercadoPago integration)",
+      "Real-time updates <200ms latency"
+    ],
+    "link": "https://foodllowers.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "MercadoPago", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "F-Kitchens",
+    "description": "Real-time kitchen management system with enterprise-grade security.",
+    "keyPoints": [
+      "Processed 500+ daily orders in real-time",
+      "Reduced order errors by 78% with validation systems",
+      "99.95% system uptime SLA"
+    ],
+    "link": "https://foodllowers-kitchens.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers-kitchens",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "F-Deliverys",
+    "description": "Logistics optimization engine with automated CI/CD and real-time monitoring.",
+    "keyPoints": [
+      "30% faster deliveries via route optimization",
+      "CI/CD pipelines reduced deployment time by 40%",
+      "Real-time tracking with 98.7% accuracy"
+    ],
+    "link": "https://foodllowers-deliverys.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers-deliverys",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "F-Influencers",
+    "description": "Influencer analytics platform with real-time dashboards and Agile workflows.",
+    "keyPoints": [
+      "Real-time sales analytics with <500ms data latency",
+      "40% faster dashboard loads via edge caching strategies",
+      "Reduced payout processing errors by 78% through validation systems",
+      "Scaled real-time data pipelines to handle 1.2M+ monthly events"
+    ],
+    "link": "https://foodllowers-influencers.vercel.app/",
+    "code": "https://github.com/RonaldDev0/Foodllowers-influencers",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Supabase", "HeroUI", "Nextjs api routes", "Node.js", "Vercel", "Git", "GitHub"]
+  },
+  {
+    "title": "Portfolio",
+    "description": "High-performance developer portfolio with extreme optimization focus.",
+    "keyPoints": [
+      "Responsive and Accessible Design",
+      "100/100 Lighthouse performance score",
+      "75% faster load times vs industry average",
+      "100% SEO optimization coverage"
+    ],
+    "code": "https://github.com/RonaldDev0/RonaldDev0",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Vercel", "Shadcn", "Bun.js", "TypeScript", "Git", "GitHub"]
+  }
+]

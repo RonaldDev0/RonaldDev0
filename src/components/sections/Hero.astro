@@ -1,0 +1,68 @@
+---
+import { Button } from '../ui/button'
+
+type IButton = {
+  text: string
+  ariaLabel: string
+  href: string
+  img: string
+}
+
+const buttons: IButton[] = [
+  {
+    text: 'LinkedIn',
+    ariaLabel: 'LinkedIn Profile',
+    href: 'https://www.linkedin.com/in/ronald-zamora-524094353/',
+    img: '/icons/linkedin.svg'
+  },
+  {
+    text: 'GitHub',
+    ariaLabel: 'GitHub Profile',
+    href: 'https://github.com/RonaldDev0',
+    img: '/icons/github.svg'
+  },
+  {
+    text: 'Resume',
+    ariaLabel: 'View Resume',
+    href: '/resume',
+    img: '/icons/file.svg'
+  }
+]
+---
+
+<section id='hero' aria-label='hero'>
+  <div>
+    <div>
+      <p>I'm</p>
+      <p>Ronald Zamora</p>
+      <p>Software Developer</p>
+      <div>
+        {buttons.map(button => (
+          <a
+            href={button.href}
+            target='_blank'
+            aria-label={button.ariaLabel}
+          >
+            <Button
+              variant='outline'
+              size='lg'
+            >
+              <img
+                src={button.img}
+                class='w-[25px] h-[25px]'
+                alt='icon'
+              />
+              <span>{button.text}</span>
+            </Button>
+          </a>
+        ))}
+      </div>
+    </div>
+    <img
+      src='/personal/foto.webp'
+      class='w-[300px] h-[300px] rounded-full'
+      alt='Ronald Zamora - Software Developer'
+    />
+    <p>Experience</p>
+  </div>
+</section>
