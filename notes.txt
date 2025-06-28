@@ -1,0 +1,10 @@
+the image foto.webp is very very big. optimize (the necezary is 960x960 how max but is using 300x300 only)
+
+the education images are using 60x60 only, but you save imgs very very big unnecesary, change this.
+
+reduce strings or implement lazy loading for best performance
+
+requests are blocking the inital page, upgrade this for best performance
+
+removey polyfills, is unnecesary
+
