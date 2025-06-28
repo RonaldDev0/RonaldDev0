@@ -95,7 +95,11 @@ const education: IEducation[] = [
       <div>
         {education.map(item => (
           <a href={item.link} target='_blank'>
-            <img src={item.img} class='w-[60px] h-[60px] rounded-full' />
+            <img
+              src={item.img}
+              alt={`error: ${item.name}`}
+              class='w-[60px] h-[60px] rounded-full'
+            />
             <p>{item.name}</p>
           </a>
         ))}
