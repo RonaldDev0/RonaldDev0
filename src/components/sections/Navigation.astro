@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from '@/components/ui/ThemeToggle.astro'
+
 const navItems = [
   { href: '#hero', label: 'Home' },
   { href: '#experience', label: 'Experience' },
@@ -26,9 +28,10 @@ const navItems = [
             <span class='absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></span>
           </a>
         ))}
+        <ThemeToggle id='theme-toggle-desktop' class='ml-4' />
       </div>
       
-      <div class='md:hidden'>
+      <div class='md:hidden flex items-center'>
         <button
           id='mobile-menu-button'
           class='p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200'
@@ -53,12 +56,16 @@ const navItems = [
             {item.label}
           </a>
         ))}
+        <div class='mt-4'>
+          <ThemeToggle id='theme-toggle-mobile' showText={true} class='w-full justify-start px-3 py-2' />
+        </div>
       </div>
     </div>
   </div>
 </nav>
 
 <script>
+  // @ts-nocheck
   // Mobile menu toggle
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
