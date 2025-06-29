@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import { Button } from '../ui/button'
 
 type IButton = {
@@ -30,13 +31,17 @@ const buttons: IButton[] = [
 ]
 ---
 
-<section id='hero' aria-label='hero'>
-  <div>
+<section
+  id='hero'
+  aria-label='hero'
+  class='h-screen'
+  >
+  <div class='flex items-center justify-between h-screen relative'>
     <div>
-      <p>I'm</p>
-      <p>Ronald Zamora</p>
-      <p>Software Developer</p>
-      <div>
+      <p class='text-6xl font-bold'>I'm</p>
+      <p class='text-6xl font-bold'>Ronald Zamora</p>
+      <p class='text-3xl font-bold mt-2 mb-6'>Software Developer</p>
+      <div class='space-x-1'>
         {buttons.map(button => (
           <a
             href={button.href}
@@ -59,12 +64,16 @@ const buttons: IButton[] = [
         ))}
       </div>
     </div>
-    <img
+    <Image
       src='/personal/foto.webp'
-      class='w-[300px] h-[300px] rounded-full'
+      class='rounded-full'
       alt='Ronald Zamora - Software Developer'
-      fetchpriority='high'
+      width='300'
+      height='300'
+      loading='eager'
     />
-    <p>Experience</p>
+  </div>
+  <div class='absolute bottom-16 flex justify-center w-[1000px]'>
+    <a href='#experience' class='text-xl font-semibold'>Experience</a>
   </div>
 </section>

@@ -1,5 +1,6 @@
 ---
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../ui/card'
+import { Button } from '@/components/ui/button'
 import { Badge } from '../../ui/badge'
 import data from './info.json'
 
@@ -16,50 +17,32 @@ type IProject = {
 const projects: IProject[] = data
 ---
 
-<section id='projects'>
-  <div>
-    <h2>Projects</h2>
+<section id='projects' class='space-y-6'>
+  <div class='space-y-6'>
+    <h2 class='font-bold text-3xl'>Projects</h2>
     <div>
-      <p>Here are some of the projects I\'ve worked on.</p>
-      <p>The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.</p>
+      <p>Here are some of the projects I've worked on.</p>
+      <p class='text-muted-foreground'>The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.</p>
     </div>
   </div>
 
-  <div>
+  <div class='grid grid-cols-3 gap-6'>
     {projects.map(project => (
-      <Card>
+      <Card className='max-w-96 space-y-2 flex flex-col'>
         <CardHeader>
-          <div>
-            <CardTitle>
-              {project.title}
-            </CardTitle>
-            <div>
-              {project.link && (
-                <a href={project.link} target='_blank'>
-                  production
-                  <svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
-                  </svg>
-                </a>
-              )}
-              <a href={project.code} target='_blank'>
-                code
-                <svg class='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />
-                </svg>
-              </a>
-            </div>
-          </div>
+          <CardTitle className='font-semibold text-xl'>
+            {project.title}
+          </CardTitle>
           <CardDescription>
             {project.description}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div>
-            <h3>Key Features</h3>
-            <ul>
+          <div class='space-y-4'>
+            <h3 class='font-medium text-sm text-muted-foreground'>Key Features</h3>
+            <ul class='space-y-4'>
               {project.keyPoints.map(point => (
-                <li>
+                <li class='flex gap-2'>
                   <svg class='w-4 h-4 mt-1 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M5 13l4 4L19 7' />
                   </svg>
@@ -69,12 +52,35 @@ const projects: IProject[] = data
             </ul>
           </div>
         </CardContent>
-        <CardFooter>
-          {project.stack.map(tech => (
-            <Badge variant='secondary'>
-              {tech}
-            </Badge>
-          ))}
+        <CardFooter className='flex flex-col mt-auto'>
+          <div class='flex flex-row flex-wrap gap-2'>
+            {project.stack.map(tech => (
+              <Badge variant='secondary'>
+                {tech}
+              </Badge>
+            ))}
+          </div>
+          <div class='mt-8 flex w-full gap-2'>
+            {project.link && (
+              <a href={project.link} target='_blank' class='flex-1'>
+                <Button
+                  variant='outline'
+                  className='w-full cursor-pointer font-bold text-lg'
+                  >
+                  production
+                </Button>
+              </a>
+            )}
+            <a href={project.code} target='_blank' class='flex-1'>
+              <Button
+                variant='outline'
+                className='w-full cursor-pointer font-bold text-lg'
+                
+                >
+                code
+              </Button>
+            </a>
+          </div>
         </CardFooter>
       </Card>
     ))}

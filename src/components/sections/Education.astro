@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card'
 
 type IEducation = {
@@ -76,8 +77,8 @@ const education: IEducation[] = [
 ]
 ---
 
-<section id='education'>
-  <h2>Education</h2>
+<section id='education' class='space-y-6'>
+  <h2 class='text-3xl font-bold'>Education</h2>
   <CardDescription>
     Throughout my training as a self-taught developer, YouTube has been my main ally.
     <br />
@@ -92,13 +93,15 @@ const education: IEducation[] = [
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <div>
+      <div class='grid grid-cols-4 gap-6'>
         {education.map(item => (
-          <a href={item.link} target='_blank'>
-            <img
+          <a href={item.link} target='_blank' class='text-center flex flex-col items-center justify-center gap-2'>
+            <Image
               src={item.img}
               alt={`error: ${item.name}`}
-              class='w-[60px] h-[60px] rounded-full'
+              class='rounded-full'
+              width='60'
+              height='60'
             />
             <p>{item.name}</p>
           </a>

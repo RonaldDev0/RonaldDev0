@@ -9,10 +9,14 @@ import AboutMe from '@/components/sections/AboutMe.astro'
 ---
 
 <Layout>
-	<Hero />
-	<Experience />
-	<Projects />
-	<Stack />
-	<Education />
-	<AboutMe />
+	<div class='w-full flex justify-center'>
+		<div class='w-[1000px] flex flex-col gap-38 mb-38'>
+			<Hero />
+			<Experience />
+			<Projects />
+			<Stack />
+			<Education />
+			<AboutMe />
+		</div>
+	</div>
 </Layout>
