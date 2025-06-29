@@ -1,16 +1,19 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import Navigation from '@/components/sections/Navigation.astro'
 import Hero from '@/components/sections/Hero.astro'
 import Experience from '@/components/sections/Experience.astro'
 import Projects from '@/components/sections/projects/index.astro'
 import Stack from '@/components/sections/stack.astro'
 import Education from '@/components/sections/Education.astro'
 import AboutMe from '@/components/sections/AboutMe.astro'
+import Footer from '@/components/sections/Footer.astro'
 ---
 
 <Layout>
-	<div class='w-full flex justify-center'>
-		<div class='w-[1000px] flex flex-col gap-38 mb-38'>
+	<Navigation />
+	<div class='w-full flex justify-center px-4 sm:px-6 lg:px-8 pt-16'>
+		<div class='w-full max-w-6xl flex flex-col gap-16 sm:gap-20 lg:gap-24 mb-16 sm:mb-20 lg:mb-24'>
 			<Hero />
 			<Experience />
 			<Projects />
@@ -19,4 +22,5 @@ import AboutMe from '@/components/sections/AboutMe.astro'
 			<AboutMe />
 		</div>
 	</div>
+	<Footer />
 </Layout>

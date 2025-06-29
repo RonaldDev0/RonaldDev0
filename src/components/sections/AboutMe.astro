@@ -3,32 +3,41 @@ import { Image } from 'astro:assets'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 ---
 
-<section id='about-me' class='space-y-6'>
-  <h2 class='text-3xl font-bold'>About me</h2>
-  <Card>
-    <CardHeader>
+<section id='about-me' class='space-y-8 sm:space-y-12'>
+  <div class='text-center'>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>About Me</h2>
+  </div>
+  <Card className='max-w-6xl mx-auto'>
+    <CardHeader className='text-center'>
       <CardTitle>
-        <p class='text-xl'>Who am I?</p>
+        <h3 class='text-2xl sm:text-3xl font-bold'>Who am I?</h3>
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <div class='flex gap-28 items-center'>
-        <p>
-          Hi! I'm Ronald Zamora 👋, a Software Engineer and Full-Stack Web Developer passionate about learning and overcoming challenges. Beyond code, I love exploring new technologies and methodologies to stay ahead in this dynamic digital world. 💡
-          <br /><br />
-          I define myself as a proactive, results-oriented professional with a strong collaborative spirit. I firmly believe in the power of teamwork, effective communication and creativity to transform ideas into innovative and scalable solutions. 🚀
-          <br /><br />
-          Outside of work, I enjoy video games 🎮, a passion that helps me relax and, at the same time, inspires me to think about user experience and the gamification of projects.
-          <br /><br />
-          I am always ready to take on new challenges and bring value both in individual projects and in multidisciplinary teams. I am happy to connect and explore together how we can transform the digital future! 🤝
-        </p>
-        <Image
-          src='/personal/foto.webp'
-          class='rounded-full'
-          width='300'
-          height='300'
-          alt='Ronald Zamora - Software Developer'
-        />
+      <div class='flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 items-center'>
+        <div class='flex-1 space-y-6 prose prose-lg dark:prose-invert max-w-none'>
+          <p class='text-base sm:text-lg leading-relaxed'>
+            Hi! I'm Ronald Zamora 👋, a Software Engineer and Full-Stack Web Developer passionate about learning and overcoming challenges. Beyond code, I love exploring new technologies and methodologies to stay ahead in this dynamic digital world. 💡
+          </p>
+          <p class='text-base sm:text-lg leading-relaxed'>
+            I define myself as a proactive, results-oriented professional with a strong collaborative spirit. I firmly believe in the power of teamwork, effective communication and creativity to transform ideas into innovative and scalable solutions. 🚀
+          </p>
+          <p class='text-base sm:text-lg leading-relaxed'>
+            Outside of work, I enjoy video games 🎮, a passion that helps me relax and, at the same time, inspires me to think about user experience and the gamification of projects.
+          </p>
+          <p class='text-base sm:text-lg leading-relaxed'>
+            I am always ready to take on new challenges and bring value both in individual projects and in multidisciplinary teams. I am happy to connect and explore together how we can transform the digital future! 🤝
+          </p>
+        </div>
+        <div class='flex-shrink-0'>
+          <Image
+            src='/personal/foto.webp'
+            class='rounded-full shadow-2xl border-4 border-card'
+            width='280'
+            height='280'
+            alt='Ronald Zamora - Software Developer'
+          />
+        </div>
       </div>
     </CardContent>
   </Card>

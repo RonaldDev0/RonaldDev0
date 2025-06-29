@@ -77,33 +77,42 @@ const education: IEducation[] = [
 ]
 ---
 
-<section id='education' class='space-y-6'>
-  <h2 class='text-3xl font-bold'>Education</h2>
-  <CardDescription>
-    Throughout my training as a self-taught developer, YouTube has been my main ally.
-    <br />
-    For years I have absorbed knowledge from multiple specialized channels, which has allowed me to master new technologies and always stay up to date with the latest trends in software development.
-    <br />
-    Below, I highlight those resources that have marked my professional career and that I consider essential for my continued growth.
-  </CardDescription>
-  <Card>
-    <CardHeader>
+<section id='education' class='space-y-8 sm:space-y-12'>
+  <div class='text-center space-y-4 sm:space-y-6 max-w-4xl mx-auto'>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Education</h2>
+    <CardDescription className='text-base sm:text-lg leading-relaxed max-w-3xl mx-auto'>
+      Throughout my training as a self-taught developer, YouTube has been my main ally.
+      <br />
+      For years I have absorbed knowledge from multiple specialized channels, which has allowed me to master new technologies and always stay up to date with the latest trends in software development.
+      <br />
+      Below, I highlight those resources that have marked my professional career and that I consider essential for my continued growth.
+    </CardDescription>
+  </div>
+  <Card className='max-w-6xl mx-auto'>
+    <CardHeader className='text-center'>
       <CardTitle>
-        <p>Featured Channels</p>
+        <h3 class='text-2xl sm:text-3xl font-bold'>Featured Channels</h3>
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <div class='grid grid-cols-4 gap-6'>
+      <div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6'>
         {education.map(item => (
-          <a href={item.link} target='_blank' class='text-center flex flex-col items-center justify-center gap-2'>
-            <Image
-              src={item.img}
-              alt={`error: ${item.name}`}
-              class='rounded-full'
-              width='60'
-              height='60'
-            />
-            <p>{item.name}</p>
+          <a 
+            href={item.link} 
+            target='_blank' 
+            rel='noopener noreferrer'
+            class='text-center flex flex-col items-center justify-center gap-3 p-4 rounded-lg hover:bg-accent transition-all duration-200 group'
+          >
+            <div class='relative'>
+              <Image
+                src={item.img}
+                alt={`${item.name} channel`}
+                class='rounded-full transition-transform duration-200 group-hover:scale-110'
+                width='56'
+                height='56'
+              />
+            </div>
+            <p class='text-xs sm:text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-200'>{item.name}</p>
           </a>
         ))}
       </div>

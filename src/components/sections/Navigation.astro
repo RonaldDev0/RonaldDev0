@@ -1,0 +1,100 @@
+---
+const navItems = [
+  { href: '#hero', label: 'Home' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#stack', label: 'Stack' },
+  { href: '#education', label: 'Education' },
+  { href: '#about-me', label: 'About' }
+]
+---
+
+<nav class='fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50'>
+  <div class='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div class='flex items-center justify-between h-16'>
+      <a href='#hero' class='text-xl font-bold hover:text-primary transition-colors duration-200'>
+        Ronald Zamora
+      </a>
+      
+      <div class='hidden md:flex items-center space-x-8'>
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class='text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group'
+          >
+            {item.label}
+            <span class='absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></span>
+          </a>
+        ))}
+      </div>
+      
+      <div class='md:hidden'>
+        <button
+          id='mobile-menu-button'
+          class='p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200'
+          aria-label='Toggle mobile menu'
+          aria-expanded='false'
+        >
+          <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id='mobile-menu' class='md:hidden hidden'>
+      <div class='px-2 pt-2 pb-3 space-y-1 border-t border-border/50'>
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class='block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors duration-200'
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+  
+  // Smooth scroll for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e: Event) => {
+      e.preventDefault();
+      const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+      if (href) {
+        const target = document.querySelector(href) as HTMLElement;
+        if (target) {
+          const offsetTop = target.offsetTop - 80; // Account for fixed header
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+</script> 

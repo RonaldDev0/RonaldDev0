@@ -17,67 +17,70 @@ type IProject = {
 const projects: IProject[] = data
 ---
 
-<section id='projects' class='space-y-6'>
-  <div class='space-y-6'>
-    <h2 class='font-bold text-3xl'>Projects</h2>
-    <div>
-      <p>Here are some of the projects I've worked on.</p>
-      <p class='text-muted-foreground'>The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.</p>
+<section id='projects' class='space-y-8 sm:space-y-12'>
+  <div class='space-y-4 sm:space-y-6 text-center max-w-4xl mx-auto'>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Projects</h2>
+    <div class='space-y-3'>
+      <p class='text-lg sm:text-xl text-muted-foreground'>
+        Here are some of the projects I've worked on.
+      </p>
+      <p class='text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto'>
+        The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.
+      </p>
     </div>
   </div>
 
-  <div class='grid grid-cols-3 gap-6'>
+  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
     {projects.map(project => (
-      <Card className='max-w-96 space-y-2 flex flex-col'>
-        <CardHeader>
-          <CardTitle className='font-semibold text-xl'>
+      <Card className='h-full flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1'>
+        <CardHeader className='space-y-3'>
+          <CardTitle className='text-xl sm:text-2xl font-bold line-clamp-2'>
             {project.title}
           </CardTitle>
-          <CardDescription>
+          <CardDescription className='text-sm sm:text-base leading-relaxed'>
             {project.description}
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <div class='space-y-4'>
-            <h3 class='font-medium text-sm text-muted-foreground'>Key Features</h3>
-            <ul class='space-y-4'>
+        <CardContent className='flex-1 space-y-4'>
+          <div class='space-y-3'>
+            <h3 class='font-semibold text-sm text-muted-foreground uppercase tracking-wide'>Key Features</h3>
+            <ul class='space-y-3'>
               {project.keyPoints.map(point => (
-                <li class='flex gap-2'>
+                <li class='flex gap-3 items-start'>
                   <svg class='w-4 h-4 mt-1 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M5 13l4 4L19 7' />
                   </svg>
-                  {point}
+                  <span class='text-sm sm:text-base leading-relaxed'>{point}</span>
                 </li>
               ))}
             </ul>
           </div>
         </CardContent>
-        <CardFooter className='flex flex-col mt-auto'>
-          <div class='flex flex-row flex-wrap gap-2'>
+        <CardFooter className='flex flex-col space-y-4 mt-auto'>
+          <div class='flex flex-wrap gap-2'>
             {project.stack.map(tech => (
-              <Badge variant='secondary'>
+              <Badge variant='secondary' className='text-xs'>
                 {tech}
               </Badge>
             ))}
           </div>
-          <div class='mt-8 flex w-full gap-2'>
+          <div class='flex w-full gap-3'>
             {project.link && (
-              <a href={project.link} target='_blank' class='flex-1'>
+              <a href={project.link} target='_blank' rel='noopener noreferrer' class='flex-1'>
                 <Button
                   variant='outline'
-                  className='w-full cursor-pointer font-bold text-lg'
-                  >
-                  production
+                  className='w-full font-medium transition-all duration-200 hover:scale-105'
+                >
+                  Live Demo
                 </Button>
               </a>
             )}
-            <a href={project.code} target='_blank' class='flex-1'>
+            <a href={project.code} target='_blank' rel='noopener noreferrer' class='flex-1'>
               <Button
                 variant='outline'
-                className='w-full cursor-pointer font-bold text-lg'
-                
-                >
-                code
+                className='w-full font-medium transition-all duration-200 hover:scale-105'
+              >
+                View Code
               </Button>
             </a>
           </div>

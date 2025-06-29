@@ -2,25 +2,28 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card'
 ---
 
-<section id='experience' aria-label='experience' class='pt-36'>
-  <Card>
-    <CardHeader>
-      <CardTitle className='font-bold text-2xl'>
+<section id='experience' aria-label='experience' class='py-16 sm:py-20 lg:py-24'>
+  <Card className='max-w-4xl mx-auto'>
+    <CardHeader className='text-center space-y-4'>
+      <CardTitle className='text-3xl sm:text-4xl font-bold'>
         Experience
       </CardTitle>
-      <CardDescription>
+      <CardDescription className='text-lg sm:text-xl'>
         Software Developer
       </CardDescription>
     </CardHeader>
-    <CardContent>
-      <p>
-        👨‍💻 I am a Software Engineer and Full-Stack Web Developer with more than 3 years of experience and a passion for transforming ideas into innovative and scalable digital solutions
-        <br />
-        I have developed, completely independently, high-impact projects that demonstrate my ability to manage complex initiatives from start to finish.
-      </p>
+    <CardContent className='space-y-6'>
+      <div class='prose prose-lg dark:prose-invert max-w-none'>
+        <p class='text-base sm:text-lg leading-relaxed'>
+          👨‍💻 I am a Software Engineer and Full-Stack Web Developer with more than 3 years of experience and a passion for transforming ideas into innovative and scalable digital solutions.
+        </p>
+        <p class='text-base sm:text-lg leading-relaxed'>
+          I have developed, completely independently, high-impact projects that demonstrate my ability to manage complex initiatives from start to finish.
+        </p>
+      </div>
     </CardContent>
-    <CardFooter>
-      <p>
+    <CardFooter className='justify-center'>
+      <p class='text-base sm:text-lg leading-relaxed text-center max-w-3xl'>
         🤝 I am looking to join dynamic and collaborative teams, where I can contribute my strategic vision, commitment to technical excellence and passion for innovation to drive high-impact digital projects.
       </p>
     </CardFooter>

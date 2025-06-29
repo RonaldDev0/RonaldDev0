@@ -34,29 +34,38 @@ const buttons: IButton[] = [
 <section
   id='hero'
   aria-label='hero'
-  class='h-screen'
+  class='min-h-screen flex items-center justify-center py-8 sm:py-12 lg:py-16'
   >
-  <div class='flex items-center justify-between h-screen relative'>
-    <div>
-      <p class='text-6xl font-bold'>I'm</p>
-      <p class='text-6xl font-bold'>Ronald Zamora</p>
-      <p class='text-3xl font-bold mt-2 mb-6'>Software Developer</p>
-      <div class='space-x-1'>
+  <div class='w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 xl:gap-16'>
+    <div class='text-center lg:text-left space-y-4 sm:space-y-6'>
+      <div class='space-y-2 sm:space-y-4'>
+        <h1 class='text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight'>
+          <span class='block'>I'm</span>
+          <span class='block'>Ronald Zamora</span>
+        </h1>
+        <p class='text-xl sm:text-2xl lg:text-3xl font-semibold text-muted-foreground'>
+          Software Developer
+        </p>
+      </div>
+      <div class='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start'>
         {buttons.map(button => (
           <a
             href={button.href}
             target='_blank'
+            rel='noopener noreferrer'
             aria-label={button.ariaLabel}
+            class='inline-flex'
           >
             <Button
               variant='outline'
               size='lg'
-              className='cursor-pointer'
+              className='w-full sm:w-auto transition-all duration-200 hover:scale-105'
             >
               <img
                 src={button.img}
-                class='w-[25px] h-[25px]'
-                alt='icon'
+                class='w-5 h-5 sm:w-6 sm:h-6'
+                alt=''
+                aria-hidden='true'
               />
               <span>{button.text}</span>
             </Button>
@@ -64,16 +73,27 @@ const buttons: IButton[] = [
         ))}
       </div>
     </div>
-    <Image
-      src='/personal/foto.webp'
-      class='rounded-full'
-      alt='Ronald Zamora - Software Developer'
-      width='300'
-      height='300'
-      loading='eager'
-    />
+    <div class='flex-shrink-0'>
+      <Image
+        src='/personal/foto.webp'
+        class='rounded-full shadow-2xl border-4 border-card'
+        alt='Ronald Zamora - Software Developer'
+        width='280'
+        height='280'
+        loading='eager'
+      />
+    </div>
   </div>
-  <div class='absolute bottom-16 flex justify-center w-[1000px]'>
-    <a href='#experience' class='text-xl font-semibold'>Experience</a>
+  <div class='absolute bottom-8 left-1/2 transform -translate-x-1/2'>
+    <a 
+      href='#experience' 
+      class='inline-flex items-center gap-2 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors duration-200'
+      aria-label='Scroll to Experience section'
+    >
+      <span>Experience</span>
+      <svg class='w-5 h-5 animate-bounce' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 14l-7 7m0 0l-7-7m7 7V3'></path>
+      </svg>
+    </a>
   </div>
 </section>
