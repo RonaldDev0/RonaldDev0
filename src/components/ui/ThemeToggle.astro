@@ -1,6 +1,6 @@
 ---
 // Props: { showText?: boolean, class?: string, id?: string }
-const { showText = false, class: className = '', id = 'theme-toggle' } = Astro.props;
+const { showText = false, class: className = '', id = 'theme-toggle' } = Astro.props
 ---
 {showText ? (
   <button
@@ -29,68 +29,68 @@ const { showText = false, class: className = '', id = 'theme-toggle' } = Astro.p
     if (!el) return;
     el.innerHTML = isDark
       ? `<svg class='w-5 h-5 text-yellow-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z'/></svg>`
-      : `<svg class='w-5 h-5 text-blue-500' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z'/></svg>`;
+      : `<svg class='w-5 h-5 text-blue-500' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z'/></svg>`
   }
 
   function applyTheme(dark) {
-    const html = document.documentElement;
+    const html = document.documentElement
     if (dark) {
-      html.classList.add('dark');
+      html.classList.add('dark')
     } else {
-      html.classList.remove('dark');
+      html.classList.remove('dark')
     }
-    // Actualiza todos los toggles
-    setThemeIcon(dark, document.getElementById('theme-toggle-desktop-icon'));
-    setThemeIcon(dark, document.getElementById('theme-toggle-mobile-icon'));
+    // Update all toggles
+    setThemeIcon(dark, document.getElementById('theme-toggle-desktop-icon'))
+    setThemeIcon(dark, document.getElementById('theme-toggle-mobile-icon'))
   }
 
   function getSystemPrefersDark() {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
   }
 
   function getStoredTheme() {
-    return localStorage.getItem('theme');
+    return localStorage.getItem('theme')
   }
 
   function setStoredTheme(theme) {
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('theme', theme)
   }
 
   function initThemeToggles() {
-    let dark = false;
-    const stored = getStoredTheme();
-    if (stored === 'dark') dark = true;
+    let dark = false
+    const stored = getStoredTheme()
+    if (stored === 'dark') dark = true
     else if (stored === 'light') dark = false;
-    else dark = getSystemPrefersDark();
-    applyTheme(dark);
-    // Asignar eventos a ambos toggles si existen
-    const desktopToggle = document.getElementById('theme-toggle-desktop');
-    const mobileToggle = document.getElementById('theme-toggle-mobile');
+    else dark = getSystemPrefersDark()
+    applyTheme(dark)
+    // Assign events to both toggles if they exist
+    const desktopToggle = document.getElementById('theme-toggle-desktop')
+    const mobileToggle = document.getElementById('theme-toggle-mobile')
     if (desktopToggle) {
       desktopToggle.onclick = () => {
-        const isDark = !document.documentElement.classList.contains('dark');
+        const isDark = !document.documentElement.classList.contains('dark')
         applyTheme(isDark);
-        setStoredTheme(isDark ? 'dark' : 'light');
+        setStoredTheme(isDark ? 'dark' : 'light')
       };
     }
     if (mobileToggle) {
       mobileToggle.onclick = () => {
-        const isDark = !document.documentElement.classList.contains('dark');
-        applyTheme(isDark);
-        setStoredTheme(isDark ? 'dark' : 'light');
+        const isDark = !document.documentElement.classList.contains('dark')
+        applyTheme(isDark)
+        setStoredTheme(isDark ? 'dark' : 'light')
       };
     }
   }
 
-  // Re-inicializa los toggles cada vez que se abre el menú mobile
+  // Re-initialize toggles every time mobile menu is opened
   document.addEventListener('DOMContentLoaded', () => {
     initThemeToggles();
-    // Si hay menú mobile, re-inicializa cuando se muestra
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    // If there's a mobile menu, re-initialize when it's shown
+    const mobileMenuButton = document.getElementById('mobile-menu-button')
     if (mobileMenuButton) {
       mobileMenuButton.addEventListener('click', () => {
-        setTimeout(initThemeToggles, 10);
-      });
+        setTimeout(initThemeToggles, 10)
+      })
     }
-  });
+  })
 </script> 

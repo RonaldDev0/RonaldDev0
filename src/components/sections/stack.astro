@@ -2,11 +2,47 @@
 import { Image } from 'astro:assets'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
+// Import frontend images
+import html5Icon from '../../assets/stack/frontend/html5.svg'
+import cssIcon from '../../assets/stack/frontend/css_old.svg'
+import javascriptIcon from '../../assets/stack/frontend/javascript.svg'
+import typescriptIcon from '../../assets/stack/frontend/typescript.svg'
+import reactIcon from '../../assets/stack/frontend/react_dark.svg'
+import tailwindIcon from '../../assets/stack/frontend/tailwindcss.svg'
+import zustandIcon from '../../assets/stack/frontend/zustand.svg'
+import flutterIcon from '../../assets/stack/frontend/flutter.svg'
+import expoIcon from '../../assets/stack/frontend/expo.svg'
+
+// Import backend images
+import nodejsIcon from '../../assets/stack/backend/nodejs.svg'
+import bunIcon from '../../assets/stack/backend/bun.svg'
+import nextjsIcon from '../../assets/stack/backend/nextjs_icon_dark.svg'
+import supabaseIcon from '../../assets/stack/backend/supabase.svg'
+import mercadoPagoIcon from '../../assets/stack/backend/mercado-pago.svg'
+import postgresqlIcon from '../../assets/stack/backend/postgresql.svg'
+import pythonIcon from '../../assets/stack/backend/python.svg'
+
+// Import tools images
+import gitIcon from '../../assets/stack/tools/git.svg'
+import githubIcon from '../../assets/stack/tools/github-dark.svg'
+import bashIcon from '../../assets/stack/tools/bash_dark.svg'
+import vscodeIcon from '../../assets/stack/tools/vscode.svg'
+import postmanIcon from '../../assets/stack/tools/postman.svg'
+import windowsIcon from '../../assets/stack/tools/windows.svg'
+import linuxIcon from '../../assets/stack/tools/linux.svg'
+import vercelIcon from '../../assets/stack/tools/vercel_dark.svg'
+
+// Import learning images
+import redisIcon from '../../assets/stack/learning/redis.svg'
+import awsIcon from '../../assets/stack/learning/aws_dark.svg'
+import ollamaIcon from '../../assets/stack/learning/ollama_dark.svg'
+import rustIcon from '../../assets/stack/learning/rust_dark.svg'
+
 type IStack = {
   title: string,
   stack: {
     name: string,
-    img: string
+    img: any
   }[]
 }
 
@@ -14,51 +50,51 @@ const stacks: IStack[] = [
   {
     title: 'Frontend',
     stack: [
-      { name: 'HTML', img: '/stack/frontend/html5.svg' },
-      { name: 'CSS', img: '/stack/frontend/css_old.svg' },
-      { name: 'JavaScript', img: '/stack/frontend/javascript.svg' },
-      { name: 'TypeScript', img: '/stack/frontend/typescript.svg' },
-      { name: 'React', img: '/stack/frontend/react_dark.svg' },
-      { name: 'TailwindCSS', img: '/stack/frontend/tailwindcss.svg' },
-      { name: 'Zustand', img: '/stack/frontend/zustand.svg' },
-      { name: 'Flutter', img: '/stack/frontend/flutter.svg' },
-      { name: 'React Native', img: '/stack/frontend/react_dark.svg' },
-      { name: 'Expo', img: '/stack/frontend/expo.svg' }
+      { name: 'HTML', img: html5Icon },
+      { name: 'CSS', img: cssIcon },
+      { name: 'JavaScript', img: javascriptIcon },
+      { name: 'TypeScript', img: typescriptIcon },
+      { name: 'React', img: reactIcon },
+      { name: 'TailwindCSS', img: tailwindIcon },
+      { name: 'Zustand', img: zustandIcon },
+      { name: 'Flutter', img: flutterIcon },
+      { name: 'React Native', img: reactIcon },
+      { name: 'Expo', img: expoIcon }
 
     ]
   },
   {
     title: 'Backend',
     stack: [
-      { name: 'NodeJS', img: '/stack/backend/nodejs.svg' },
-      { name: 'Bun', img: '/stack/backend/bun.svg' },
-      { name: 'NextJS', img: '/stack/backend/nextjs_icon_dark.svg' },
-      { name: 'Supabase', img: '/stack/backend/supabase.svg' },
-      { name: 'Mercado Pago', img: '/stack/backend/mercado-pago.svg' },
-      { name: 'PostgreSQL', img: '/stack/backend/postgresql.svg' },
-      { name: 'Python', img: '/stack/backend/python.svg' }
+      { name: 'NodeJS', img: nodejsIcon },
+      { name: 'Bun', img: bunIcon },
+      { name: 'NextJS', img: nextjsIcon },
+      { name: 'Supabase', img: supabaseIcon },
+      { name: 'Mercado Pago', img: mercadoPagoIcon },
+      { name: 'PostgreSQL', img: postgresqlIcon },
+      { name: 'Python', img: pythonIcon }
     ]
   },
   {
     title: 'Tools',
     stack: [
-      { name: 'Git', img: '/stack/tools/git.svg' },
-      { name: 'GitHub', img: '/stack/tools/github-dark.svg' },
-      { name: 'Terminal', img: '/stack/tools/bash_dark.svg' },
-      { name: 'VSCode', img: '/stack/tools/vscode.svg' },
-      { name: 'Postman', img: '/stack/tools/postman.svg' },
-      { name: 'Windows', img: '/stack/tools/windows.svg' },
-      { name: 'Linux', img: '/stack/tools/linux.svg' },
-      { name: 'Vercel', img: '/stack/tools/vercel_dark.svg' }
+      { name: 'Git', img: gitIcon },
+      { name: 'GitHub', img: githubIcon },
+      { name: 'Terminal', img: bashIcon },
+      { name: 'VSCode', img: vscodeIcon },
+      { name: 'Postman', img: postmanIcon },
+      { name: 'Windows', img: windowsIcon },
+      { name: 'Linux', img: linuxIcon },
+      { name: 'Vercel', img: vercelIcon }
     ]
   },
   {
     title: 'Learning',
     stack: [
-      { name: 'Redis', img: '/stack/learning/redis.svg' },
-      { name: 'AWS', img: '/stack/learning/aws_dark.svg' },
-      { name: 'AI', img: '/stack/learning/ollama_dark.svg' },
-      { name: 'Rust', img: '/stack/learning/rust_dark.svg' }
+      { name: 'Redis', img: redisIcon },
+      { name: 'AWS', img: awsIcon },
+      { name: 'AI', img: ollamaIcon },
+      { name: 'Rust', img: rustIcon }
     ]
   }
 ]

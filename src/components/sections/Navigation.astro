@@ -67,24 +67,24 @@ const navItems = [
 <script>
   // @ts-nocheck
   // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuButton = document.getElementById('mobile-menu-button')
+  const mobileMenu = document.getElementById('mobile-menu')
   
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
-      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
-      mobileMenu.classList.toggle('hidden');
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString())
+      mobileMenu.classList.toggle('hidden')
     });
     
     // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
+    const mobileLinks = mobileMenu.querySelectorAll('a')
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        mobileMenu.classList.add('hidden');
-      });
-    });
+        mobileMenuButton.setAttribute('aria-expanded', 'false')
+        mobileMenu.classList.add('hidden')
+      })
+    })
   }
   
   // Smooth scroll for navigation links
@@ -95,13 +95,13 @@ const navItems = [
       if (href) {
         const target = document.querySelector(href) as HTMLElement;
         if (target) {
-          const offsetTop = target.offsetTop - 80; // Account for fixed header
+          const offsetTop = target.offsetTop - 80 // Account for fixed header
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
-          });
+          })
         }
       }
-    });
-  });
+    })
+  })
 </script> 

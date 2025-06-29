@@ -2,11 +2,16 @@
 import { Image } from 'astro:assets'
 import { Button } from '../ui/button'
 
+// Import icons
+import linkedinIcon from '../../assets/icons/linkedin.svg'
+import githubIcon from '../../assets/icons/github.svg'
+import fileIcon from '../../assets/icons/file.svg'
+
 type IButton = {
   text: string
   ariaLabel: string
   href: string
-  img: string
+  img: any
 }
 
 const buttons: IButton[] = [
@@ -14,19 +19,19 @@ const buttons: IButton[] = [
     text: 'LinkedIn',
     ariaLabel: 'LinkedIn Profile',
     href: 'https://www.linkedin.com/in/ronald-zamora-524094353/',
-    img: '/icons/linkedin.svg'
+    img: linkedinIcon
   },
   {
     text: 'GitHub',
     ariaLabel: 'GitHub Profile',
     href: 'https://github.com/RonaldDev0',
-    img: '/icons/github.svg'
+    img: githubIcon
   },
   {
     text: 'Resume',
     ariaLabel: 'View Resume',
     href: '/resume',
-    img: '/icons/file.svg'
+    img: fileIcon
   }
 ]
 ---
@@ -61,11 +66,13 @@ const buttons: IButton[] = [
               size='lg'
               className='w-full sm:w-auto transition-all duration-200 hover:scale-105'
             >
-              <img
+              <Image
                 src={button.img}
-                class='w-5 h-5 sm:w-6 sm:h-6'
+                // class='w-5 h-5 sm:w-6 sm:h-6'
                 alt=''
                 aria-hidden='true'
+                width='24'
+                height='24'
               />
               <span>{button.text}</span>
             </Button>

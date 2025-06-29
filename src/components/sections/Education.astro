@@ -2,76 +2,91 @@
 import { Image } from 'astro:assets'
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card'
 
+// Import education images
+import platziIcon from '../../assets/education/platzi.svg'
+import midudevIcon from '../../assets/education/midudev.svg'
+import sonnySanghaIcon from '../../assets/education/sonny-sangha.webp'
+import dotCsvIcon from '../../assets/education/dot-csv.webp'
+import gentlemanProgrammingIcon from '../../assets/education/gentleman-programming.webp'
+import mouredevIcon from '../../assets/education/mouredev.webp'
+import faztIcon from '../../assets/education/fazt.webp'
+import aaronga97Icon from '../../assets/education/aaronga97.webp'
+import edteamIcon from '../../assets/education/edteam.webp'
+import diegoveloperIcon from '../../assets/education/diegoveloper.webp'
+import absaCodingIcon from '../../assets/education/absa-coding.webp'
+import carlosAzaustreIcon from '../../assets/education/carlos-azaustre.webp'
+import nateGentileIcon from '../../assets/education/nate-gentile.webp'
+
 type IEducation = {
   name: string,
-  img: string,
+  img: any,
   link: string
 }
 
 const education: IEducation[] = [
   {
     name: 'Platzi',
-    img: '/education/platzi.svg',
+    img: platziIcon,
     link: 'https://www.youtube.com/@Platzi'
   },
   {
     name: 'Midudev',
-    img: '/education/midudev.svg',
+    img: midudevIcon,
     link: 'https://www.youtube.com/@midudev'
   },
   {
     name: 'Sonny Sangha',
-    img: '/education/sonny-sangha.webp',
+    img: sonnySanghaIcon,
     link: 'https://www.youtube.com/@SonnySangha'
   },
   {
     name: 'Dot CSV',
-    img: '/education/dot-csv.webp',
+    img: dotCsvIcon,
     link: 'https://www.youtube.com/@DotCSV'
   },
   {
     name: 'Gentleman Programming',
-    img: '/education/gentleman-programming.webp',
+    img: gentlemanProgrammingIcon,
     link: 'https://www.youtube.com/@gentlemanprogramming'
   },
   {
     name: 'MoureDev',
-    img: '/education/mouredev.webp',
+    img: mouredevIcon,
     link: 'https://www.youtube.com/@mouredevtv'
   },
   {
     name: 'Fazt',
-    img: '/education/fazt.webp',
+    img: faztIcon,
     link: 'https://www.youtube.com/@FaztTech'
   },
   {
     name: 'aaronga97',
-    img: '/education/aaronga97.webp',
+    img: aaronga97Icon,
     link: 'https://www.youtube.com/@aaronga97'
   },
   {
     name: 'EDteam',
-    img: '/education/edteam.webp',
+    img: edteamIcon,
     link: 'https://www.youtube.com/@EDteam'
   },
   {
     name: 'Diegoveloper',
-    img: '/education/diegoveloper.webp',
+    img: diegoveloperIcon,
     link: 'https://www.youtube.com/@diegoveloper'
   },
   {
     name: 'Absa Coding',
-    img: '/education/absa-coding.webp',
+    img: absaCodingIcon,
     link: 'https://www.youtube.com/@AbsaCoding'
   },
   {
     name: 'Carlos Azaustre',
-    img: '/education/carlos-azaustre.webp',
+    img: carlosAzaustreIcon,
     link: 'https://www.youtube.com/@CarlosAzaustre'
   },
   {
     name: 'Nate Gentile',
-    img: '/education/nate-gentile.webp',
+    img: nateGentileIcon,
     link: 'https://www.youtube.com/@NateGentile7'
   }
 ]
