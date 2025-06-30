@@ -7,8 +7,6 @@
         "@astrojs/react": "^4.3.0",
         "@radix-ui/react-slot": "^1.2.3",
         "@tailwindcss/vite": "^4.1.11",
-        "@types/react": "^19.1.8",
-        "@types/react-dom": "^19.1.6",
         "astro": "^5.10.1",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
@@ -19,6 +17,8 @@
         "tailwindcss": "^4.1.11",
       },
       "devDependencies": {
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
         "tw-animate-css": "^1.3.4",
       },
     },

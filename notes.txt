@@ -1,13 +1,9 @@
-. upgrade UI/UX [animations, color palette]
-. upgrade content
-. SEO, cards
-. optimization
+- upgrade UI/UX [animations, color palette]
+- upgrade content
+- SEO, cards
 
 
 [optimization notes]
 
-reduce strings or implement lazy loading for best performance
-
-requests are blocking the inital page, upgrade this for best performance
-
-removey polyfills, is unnecesary
+- reduce strings or implement lazy loading for best performance
+- requests are blocking the inital page, upgrade this for best performance
