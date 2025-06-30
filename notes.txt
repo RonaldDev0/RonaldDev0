@@ -1,6 +1,6 @@
 - upgrade UI/UX [animations, color palette]
 - upgrade content
-- SEO, cards
+- update card Image for share
 
 
 [optimization notes]

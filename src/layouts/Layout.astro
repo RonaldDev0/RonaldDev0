@@ -1,27 +1,217 @@
 ---
 import '@/styles/global.css'
+
+export interface Props {
+	title?: string
+	description?: string
+	image?: string
+	canonical?: string
+}
+
+const {
+	title = 'Ronald Zamora | Senior Full-Stack Developer - Available for Hire',
+	description = 'Senior Full-Stack Developer available for hire. Expert in React, Next.js, TypeScript, and Node.js. 3+ years building scalable web applications. Remote work ready. Based in Bogotá, Colombia. View portfolio and contact for projects.',
+	image = 'https://ronaldzamora.vercel.app/preview.webp',
+	canonical = 'https://ronaldzamora.vercel.app/'
+} = Astro.props
+
+const siteName = 'Ronald Zamora | Senior Full-Stack Developer'
+const siteUrl = 'https://ronaldzamora.vercel.app/'
 ---
 
 <!doctype html>
-<html lang='en' class='dark scroll-smooth'>
+<html lang='en' class='dark'>
 	<head>
 		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
-		<meta name='description' content='Ronald Zamora - Software Engineer and Full-Stack Web Developer with 3+ years of experience. Specialized in Next.js, React, TypeScript, and scalable web applications. View my projects including StreamingX, Foodllowers, and more.' />
-		<meta name='keywords' content='Ronald Zamora, Software Developer, Full-Stack Developer, React, Next.js, TypeScript, Web Development' />
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name='title' content={title} />
+		<meta name='description' content={description} />
+		<meta name='keywords' content='Hire Full-Stack Developer, Senior Developer for Hire, React Developer Available, Next.js Developer for Hire, TypeScript Developer Colombia, Remote Developer for Hire, Colombian Developer, Bogotá Developer, Senior Full-Stack Developer, Software Engineer for Hire, Web Developer Available, Frontend Developer for Hire, Backend Developer Colombia, Node.js Developer Available, Bun Developer for Hire, PostgreSQL Developer, Supabase Developer, AWS Developer Colombia, Flutter Developer for Hire, Mobile Developer Available, Freelance Developer Colombia, Remote Work Developer, Latin American Developer, Colombian Developer, Ronald Zamora, RonaldDev0, React, Next.js, TypeScript, JavaScript, Node.js, Bun, PostgreSQL, Supabase, AWS, Flutter, Tailwind CSS, Git, Agile, Microservices, CI/CD, Jest, Testing, Web Development, Software Development, Portfolio, Developer Portfolio, Hire Developer, Available for Projects' />
 		<meta name='author' content='Ronald Zamora' />
-		<meta property='og:title' content='Ronald Zamora | Software Developer' />
-		<meta property='og:description' content='Software Engineer and Full-Stack Web Developer with 3+ years of experience. Specialized in Next.js, React, TypeScript, and scalable web applications.' />
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+		<meta name='language' content='English' />
+		<meta name='revisit-after' content='1 day' />
+		<meta name='distribution' content='global' />
+		<meta name='rating' content='general' />
+		<meta name='geo.region' content='CO' />
+		<meta name='geo.placename' content='Bogotá, Colombia' />
+		<meta name='geo.position' content='4.7110;-74.0721' />
+		<meta name='ICBM' content='4.7110, -74.0721' />
+		
+		<!-- Canonical URL -->
+		<link rel='canonical' href={canonical} />
+		
+		<!-- Open Graph / Facebook -->
 		<meta property='og:type' content='website' />
-		<meta property='og:url' content='https://ronaldzamora.dev' />
-		<meta name='twitter:card' content='summary_large_image' />
-		<meta name='twitter:title' content='Ronald Zamora | Software Developer' />
-		<meta name='twitter:description' content='Software Engineer and Full-Stack Web Developer with 3+ years of experience.' />
-		<title>Ronald Zamora | Software Developer</title>
+		<meta property='og:url' content={siteUrl} />
+		<meta property='og:title' content={title} />
+		<meta property='og:description' content={description} />
+		<meta property='og:site_name' content={siteName} />
+		<meta property='og:image' content={image} />
+		<meta property='og:image:width' content='1200' />
+		<meta property='og:image:height' content='630' />
+		<meta property='og:image:alt' content={title} />
+		<meta property='og:locale' content='en_US' />
+		<meta property='og:locale:alternate' content='es_CO' />
+		
+		<!-- Twitter -->
+		<meta property='twitter:card' content='summary_large_image' />
+		<meta property='twitter:url' content={siteUrl} />
+		<meta property='twitter:title' content={title} />
+		<meta property='twitter:description' content={description} />
+		<meta property='twitter:creator' content='@RonaldDev0' />
+		<meta property='twitter:site' content='@RonaldDev0' />
+		<meta property='twitter:image' content={image} />
+		<meta property='twitter:image:alt' content={title} />
+		
+		<!-- Additional Meta Tags -->
+		<meta name='theme-color' content='#000000' />
+		<meta name='msapplication-TileColor' content='#000000' />
+		<meta name='apple-mobile-web-app-capable' content='yes' />
+		<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+		<meta name='apple-mobile-web-app-title' content={siteName} />
+		<meta name='application-name' content={siteName} />
+		<meta name='mobile-web-app-capable' content='yes' />
+		<meta name='format-detection' content='telephone=no' />
+		<meta name='msapplication-config' content='/browserconfig.xml' />
+		
+		<!-- Structured Data - Enhanced for Job Recruitment -->
+		<script type='application/ld+json'>
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Ronald Zamora",
+				"alternateName": "RonaldDev0",
+				"url": "https://ronaldzamora.vercel.app/",
+				"image": "https://ronaldzamora.vercel.app/preview.webp",
+				"sameAs": [
+					"https://github.com/RonaldDev0",
+					"https://linkedin.com/in/ronald-zamora",
+					"https://twitter.com/RonaldDev0"
+				],
+				"jobTitle": "Senior Full-Stack Developer",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Freelance"
+				},
+				"description": "Senior Full-Stack Developer available for hire. Expert in React, Next.js, TypeScript, and Node.js. 3+ years building scalable web applications. Remote work ready.",
+				"knowsAbout": [
+					"React",
+					"Next.js", 
+					"TypeScript",
+					"JavaScript",
+					"Node.js",
+					"Bun",
+					"PostgreSQL",
+					"Supabase",
+					"REST APIs",
+					"Web Development",
+					"Frontend Development",
+					"Backend Development",
+					"Mobile Development",
+					"Flutter",
+					"AWS",
+					"Git",
+					"Agile Development",
+					"Remote Work",
+					"Team Collaboration"
+				],
+				"knowsLanguage": [
+					{
+						"@type": "Language",
+						"name": "English"
+					},
+					{
+						"@type": "Language", 
+						"name": "Spanish"
+					}
+				],
+				"nationality": {
+					"@type": "Country",
+					"name": "Colombia"
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Bogotá",
+					"addressCountry": "CO"
+				},
+				"availableForHire": true,
+				"seeks": {
+					"@type": "JobPosting",
+					"title": "Full-Stack Developer",
+					"employmentType": ["FULL_TIME", "PART_TIME", "CONTRACTOR"],
+					"workMode": ["REMOTE", "HYBRID"],
+					"location": {
+						"@type": "Place",
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "CO"
+						}
+					}
+				}
+			}
+		</script>
+		
+		<!-- Additional Structured Data for Portfolio -->
+		<script type='application/ld+json'>
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Ronald Zamora - Senior Full-Stack Developer Portfolio",
+				"url": "https://ronaldzamora.vercel.app/",
+				"description": "Senior Full-Stack Developer portfolio showcasing React, Next.js, TypeScript, and Node.js projects. Available for hire and remote work opportunities.",
+				"author": {
+					"@type": "Person",
+					"name": "Ronald Zamora"
+				},
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://ronaldzamora.vercel.app/?search={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>
+		
+		<!-- Job Posting Structured Data -->
+		<script type='application/ld+json'>
+			{
+				"@context": "https://schema.org",
+				"@type": "JobPosting",
+				"title": "Senior Full-Stack Developer Available for Hire",
+				"description": "Experienced Full-Stack Developer with 3+ years in React, Next.js, TypeScript, and Node.js. Available for remote work and contract opportunities.",
+				"datePosted": "2025-01-27",
+				"validThrough": "2025-12-31",
+				"employmentType": ["FULL_TIME", "PART_TIME", "CONTRACTOR"],
+				"workMode": ["REMOTE", "HYBRID"],
+				"applicantLocationRequirements": {
+					"@type": "Country",
+					"name": "Colombia"
+				},
+				"jobLocation": {
+					"@type": "Place",
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Bogotá",
+						"addressCountry": "CO"
+					}
+				},
+				"hiringOrganization": {
+					"@type": "Organization",
+					"name": "Available for Hire"
+				},
+				"qualifications": [
+					"React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Git", "Agile"
+				]
+			}
+		</script>
 	</head>
 	<body class='antialiased'>
 		<slot />
 	</body>
 </html>
+
