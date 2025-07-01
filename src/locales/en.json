@@ -76,39 +76,39 @@
     },
     "foodllowers": {
       "title": "Foodllowers",
-      "description": "Developed a high-availability e-commerce platform serving 10,000+ concurrent users with real-time synchronization and seamless payment processing. Designed for reliability and business growth.",
+      "description": "Central platform of a food-tech ecosystem connecting ghost kitchens, influencers, and delivery operations. Foodllowers manages the entire sales, marketing, and delivery flow, enabling seamless collaboration between brands and creators.",
       "keyPoints": [
-        "Handled 10k+ concurrent users with 0 downtime",
-        "Integrated MercadoPago for 99.9% payment success rate",
-        "Achieved real-time updates with <200ms latency"
+        "Connects ghost kitchens with influencers and delivery through a unified platform",
+        "Automates sales, marketing campaigns, and order fulfillment for partner brands",
+        "Manages influencer relationships and payouts directly, simplifying collaboration",
+        "Integrates with modular apps for kitchen management, delivery, and analytics"
       ]
     },
     "f-kitchens": {
       "title": "F-Kitchens",
-      "description": "Built a real-time kitchen management system with enterprise-grade security, streamlining order processing and minimizing errors for food businesses.",
+      "description": "Built a modular, secure kitchen management system as part of the Foodllowers ecosystem.",
       "keyPoints": [
-        "Processed 500+ daily orders in real-time",
-        "Reduced order errors by 78% with robust validation systems",
-        "Maintained 99.95% system uptime SLA"
+        "Designed a secure, modular kitchen management system for food businesses",
+        "Implemented real-time order processing and status updates",
+        "Developed robust validation and error-handling for order workflows"
       ]
     },
     "f-deliverys": {
       "title": "F-Deliverys",
-      "description": "Created a logistics optimization engine with automated CI/CD and real-time monitoring, accelerating deliveries and deployment cycles for business operations.",
+      "description": "Built a modular logistics and delivery management system as part of the Foodllowers ecosystem.",
       "keyPoints": [
-        "Optimized delivery routes for 30% faster deliveries",
-        "Implemented CI/CD pipelines reducing deployment time by 40%",
-        "Enabled real-time tracking with 98.7% accuracy"
+        "Designed a modular logistics and delivery management system for business operations",
+        "Implemented real-time tracking and status updates for deliveries",
+        "Developed automated workflows for route optimization and order assignments"
       ]
     },
     "f-influencers": {
       "title": "F-Influencers",
-      "description": "Developed an influencer analytics platform with real-time dashboards and Agile workflows, empowering marketing teams with actionable insights and scalable data pipelines.",
+      "description": "Built a modular analytics platform for influencer marketing as part of the Foodllowers ecosystem.",
       "keyPoints": [
-        "Delivered real-time sales analytics with <500ms data latency",
-        "Accelerated dashboard loads by 40% via edge caching",
-        "Reduced payout processing errors by 78% through validation systems",
-        "Scaled data pipelines to handle 1.2M+ monthly events"
+        "Designed a modular analytics platform for influencer marketing teams",
+        "Implemented real-time dashboards and data visualization",
+        "Developed automated workflows for campaign and payout management"
       ]
     },
     "portfolio": {

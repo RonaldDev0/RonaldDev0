@@ -76,39 +76,39 @@
     },
     "foodllowers": {
       "title": "Foodllowers",
-      "description": "Desarrollé una plataforma e-commerce de alta disponibilidad para más de 10,000 usuarios concurrentes, con sincronización en tiempo real y pagos sin fricción. Diseñada para confiabilidad y crecimiento empresarial.",
+      "description": "Plataforma central de un ecosistema food-tech que conecta cocinas ocultas, influencers y operaciones de delivery. Foodllowers gestiona todo el flujo de ventas, marketing y entregas, facilitando la colaboración entre marcas y creadores.",
       "keyPoints": [
-        "Soporté más de 10k usuarios concurrentes sin caídas",
-        "Integré MercadoPago logrando 99.9% de éxito en pagos",
-        "Actualizaciones en tiempo real con latencia menor a 200ms"
+        "Conecta cocinas ocultas con influencers y delivery en una sola plataforma",
+        "Automatiza ventas, campañas de marketing y gestión de pedidos para marcas asociadas",
+        "Gestiona relaciones y pagos a influencers directamente, simplificando la colaboración",
+        "Integración con apps modulares para gestión de cocina, delivery y analítica"
       ]
     },
     "f-kitchens": {
       "title": "F-Kitchens",
-      "description": "Construí un sistema de gestión de cocina en tiempo real con seguridad de nivel empresarial, optimizando el procesamiento de pedidos y minimizando errores para negocios de alimentos.",
+      "description": "Construí un sistema de gestión de cocina modular y seguro como parte del ecosistema Foodllowers.",
       "keyPoints": [
-        "Procesé más de 500 pedidos diarios en tiempo real",
-        "Reduje errores de pedidos en un 78% con validaciones robustas",
-        "Mantuve un SLA de uptime del 99.95%"
+        "Diseñé un sistema de gestión de cocina modular y seguro para negocios de alimentos",
+        "Implementación de procesamiento de pedidos y actualizaciones en tiempo real",
+        "Desarrollé validaciones robustas y manejo de errores en los flujos de pedidos"
       ]
     },
     "f-deliverys": {
       "title": "F-Deliverys",
-      "description": "Creé un motor de optimización logística con CI/CD automatizado y monitoreo en tiempo real, acelerando entregas y ciclos de despliegue para operaciones empresariales.",
+      "description": "Construí un sistema modular de gestión logística y de entregas como parte del ecosistema Foodllowers.",
       "keyPoints": [
-        "Optimizé rutas de entrega para entregas 30% más rápidas",
-        "Implementé pipelines CI/CD reduciendo el tiempo de despliegue en 40%",
-        "Seguimiento en tiempo real con 98.7% de precisión"
+        "Diseñé un sistema modular de gestión logística y de entregas para operaciones empresariales",
+        "Implementación de seguimiento en tiempo real y actualizaciones de estado para entregas",
+        "Desarrollé flujos automatizados para optimización de rutas y asignación de pedidos"
       ]
     },
     "f-influencers": {
       "title": "F-Influencers",
-      "description": "Desarrollé una plataforma de analítica para influencers con dashboards en tiempo real y flujos de trabajo ágiles, empoderando equipos de marketing con insights accionables y pipelines de datos escalables.",
+      "description": "Construí una plataforma modular de analítica para marketing de influencers como parte del ecosistema Foodllowers.",
       "keyPoints": [
-        "Analítica de ventas en tiempo real con latencia de datos menor a 500ms",
-        "Dashboards 40% más rápidos gracias a edge caching",
-        "Reduje errores en pagos en un 78% mediante validaciones",
-        "Pipelines de datos escalables para manejar más de 1.2M eventos mensuales"
+        "Diseñé una plataforma modular de analítica para equipos de marketing de influencers",
+        "Implementación de dashboards y visualización de datos en tiempo real",
+        "Desarrollé flujos automatizados para gestión de campañas y pagos"
       ]
     },
     "portfolio": {

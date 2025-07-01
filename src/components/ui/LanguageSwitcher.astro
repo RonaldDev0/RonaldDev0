@@ -1,0 +1,91 @@
+---
+const { currentLang = 'en' } = Astro.props;
+const languages = [
+  { code: 'en', label: 'English', path: '/', flag: 'us' },
+  { code: 'es', label: 'Español', path: '/es/', flag: 'es' }
+];
+
+function getFlag(code: string) {
+  if (code === 'es') {
+    return `<svg width='20' height='20' viewBox='0 0 60 60' aria-hidden='true'><rect width='60' height='60' fill='#aa151b'/><rect y='15' width='60' height='30' fill='#f1bf00'/></svg>`;
+  }
+  // USA flag
+  return `<svg width='20' height='20' viewBox='0 0 60 60' aria-hidden='true'><rect width='60' height='60' fill='#b22234'/><g><rect y='5' width='60' height='5' fill='#fff'/><rect y='15' width='60' height='5' fill='#fff'/><rect y='25' width='60' height='5' fill='#fff'/><rect y='35' width='60' height='5' fill='#fff'/><rect y='45' width='60' height='5' fill='#fff'/><rect y='55' width='60' height='5' fill='#fff'/></g><rect width='24' height='24' fill='#3c3b6e'/><g fill='#fff'><circle cx='3' cy='3' r='1.2'/><circle cx='9' cy='3' r='1.2'/><circle cx='15' cy='3' r='1.2'/><circle cx='21' cy='3' r='1.2'/><circle cx='6' cy='6' r='1.2'/><circle cx='12' cy='6' r='1.2'/><circle cx='18' cy='6' r='1.2'/><circle cx='3' cy='9' r='1.2'/><circle cx='9' cy='9' r='1.2'/><circle cx='15' cy='9' r='1.2'/><circle cx='21' cy='9' r='1.2'/><circle cx='6' cy='12' r='1.2'/><circle cx='12' cy='12' r='1.2'/><circle cx='18' cy='12' r='1.2'/><circle cx='3' cy='15' r='1.2'/><circle cx='9' cy='15' r='1.2'/><circle cx='15' cy='15' r='1.2'/><circle cx='21' cy='15' r='1.2'/><circle cx='6' cy='18' r='1.2'/><circle cx='12' cy='18' r='1.2'/><circle cx='18' cy='18' r='1.2'/><circle cx='3' cy='21' r='1.2'/><circle cx='9' cy='21' r='1.2'/><circle cx='15' cy='21' r='1.2'/><circle cx='21' cy='21' r='1.2'/></g></svg>`;
+}
+
+const activeLang = languages.find(l => l.code === currentLang) || languages[0];
+---
+<style>
+.language-switcher-select {
+  position: relative;
+  display: inline-block;
+}
+.language-switcher-summary {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  transition: all 0.2s;
+  cursor: pointer;
+  list-style: none;
+}
+.language-switcher-select[open] .language-switcher-summary {
+  background: var(--color-accent);
+  border-color: var(--color-primary);
+}
+.language-switcher-list {
+  position: absolute; right: 0; margin-top: 0.5rem; min-width: 120px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 0.10);
+  z-index: 50;
+  display: flex; flex-direction: column; padding: 0.25rem 0;
+}
+.language-switcher-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  color: var(--color-foreground);
+  text-decoration: none;
+}
+.language-switcher-item[aria-current="page"] {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+.language-switcher-item:hover, .language-switcher-item:focus {
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+</style>
+<details class='language-switcher-select'>
+  <summary class='language-switcher-summary' aria-haspopup='listbox'>
+    <span class='inline-block' set:html={getFlag(activeLang.code)}></span>
+    <span class='hidden sm:inline'>{activeLang.label}</span>
+    <svg class='ml-1' width='16' height='16' viewBox='0 0 20 20' fill='none' aria-hidden='true'><path d='M6 8l4 4 4-4' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>
+  </summary>
+  <div class='language-switcher-list' role='listbox'>
+    {languages.map(lang => (
+      <a
+        href={lang.path}
+        class='language-switcher-item'
+        aria-current={currentLang === lang.code ? 'page' : undefined}
+        hreflang={lang.code}
+        aria-label={lang.label}
+        tabindex='0'
+      >
+        <span class='inline-block' set:html={getFlag(lang.code)}></span>
+        <span class='hidden sm:inline'>{lang.label}</span>
+      </a>
+    ))}
+  </div>
+</details> 

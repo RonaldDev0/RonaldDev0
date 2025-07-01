@@ -1,6 +1,7 @@
 ---
 import ThemeToggle from '@/components/ui/ThemeToggle.astro'
-const { t } = Astro.props;
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher.astro'
+const { t, currentLang = 'en' } = Astro.props;
 if (!t) {
   throw new Error("[Navigation.astro] Missing 't' prop. Pass the translation object: <Navigation t={translations.nav} />");
 }
@@ -31,6 +32,7 @@ const navItems: { href: string; label: string }[] = [
             <span class='absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></span>
           </a>
         ))}
+        <LanguageSwitcher currentLang={currentLang} />
         <ThemeToggle id='theme-toggle-desktop' class='ml-4' />
       </div>
       
@@ -45,6 +47,7 @@ const navItems: { href: string; label: string }[] = [
             <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
           </svg>
         </button>
+        <LanguageSwitcher currentLang={currentLang} />
       </div>
     </div>
     
