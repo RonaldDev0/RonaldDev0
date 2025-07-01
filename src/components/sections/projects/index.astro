@@ -22,10 +22,10 @@ const projects: IProject[] = data
     <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Projects</h2>
     <div class='space-y-3'>
       <p class='text-lg sm:text-xl text-muted-foreground'>
-        Here are some of the projects I've worked on.
+        Explore a selection of projects where I've delivered real business value through technology, innovation, and measurable results.
       </p>
       <p class='text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto'>
-        The prefix F means that it is part of the Foodllowers application matrix, since I developed the entire business model and it is completely functional, for practical purposes I divided it into apps for better explanation.
+        Projects prefixed with <b>F</b> are part of the Foodllowers application suite—a business ecosystem I designed and built from scratch, divided into specialized apps for clarity.
       </p>
     </div>
   </div>
@@ -46,8 +46,8 @@ const projects: IProject[] = data
             <h3 class='font-semibold text-sm text-muted-foreground uppercase tracking-wide'>Key Features</h3>
             <ul class='space-y-3'>
               {project.keyPoints.map(point => (
-                <li class='flex gap-3 items-start'>
-                  <svg class='w-4 h-4 mt-1 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <li class='flex gap-3 items-center'>
+                  <svg class='w-5 h-5 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M5 13l4 4L19 7' />
                   </svg>
                   <span class='text-sm sm:text-base leading-relaxed'>{point}</span>

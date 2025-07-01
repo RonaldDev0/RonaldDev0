@@ -1,5 +1,5 @@
+- EN/ES
 - upgrade UI/UX [animations, color palette]
-- upgrade content
 - update card Image for share
 
 

@@ -12,37 +12,51 @@ import tailwindIcon from '../../assets/stack/frontend/tailwindcss.svg'
 import zustandIcon from '../../assets/stack/frontend/zustand.svg'
 import flutterIcon from '../../assets/stack/frontend/flutter.svg'
 import expoIcon from '../../assets/stack/frontend/expo.svg'
+import expoIconLight from '../../assets/stack/frontend/expo-ligth.svg'
+import astroIcon from '../../assets/stack/frontend/astro-dark.svg'
+import astroIconLight from '../../assets/stack/frontend/astro-light.svg'
 
 // Import backend images
 import nodejsIcon from '../../assets/stack/backend/nodejs.svg'
 import bunIcon from '../../assets/stack/backend/bun.svg'
 import nextjsIcon from '../../assets/stack/backend/nextjs_icon_dark.svg'
 import supabaseIcon from '../../assets/stack/backend/supabase.svg'
-import mercadoPagoIcon from '../../assets/stack/backend/mercado-pago.svg'
 import postgresqlIcon from '../../assets/stack/backend/postgresql.svg'
 import pythonIcon from '../../assets/stack/backend/python.svg'
 
 // Import tools images
 import gitIcon from '../../assets/stack/tools/git.svg'
 import githubIcon from '../../assets/stack/tools/github-dark.svg'
+import githubIconLight from '../../assets/stack/tools/github-light.svg'
 import bashIcon from '../../assets/stack/tools/bash_dark.svg'
-import vscodeIcon from '../../assets/stack/tools/vscode.svg'
+import bashIconLight from '../../assets/stack/tools/bash-light.svg'
+import cursorIcon from '../../assets/stack/tools/cursor.webp'
 import postmanIcon from '../../assets/stack/tools/postman.svg'
-import windowsIcon from '../../assets/stack/tools/windows.svg'
 import linuxIcon from '../../assets/stack/tools/linux.svg'
 import vercelIcon from '../../assets/stack/tools/vercel_dark.svg'
+import vercelIconLight from '../../assets/stack/tools/vercel-light.svg'
 
 // Import learning images
 import redisIcon from '../../assets/stack/learning/redis.svg'
 import awsIcon from '../../assets/stack/learning/aws_dark.svg'
+import awsIconLight from '../../assets/stack/learning/aws-ligth.svg'
 import ollamaIcon from '../../assets/stack/learning/ollama_dark.svg'
+import ollamaIconLight from '../../assets/stack/learning/ollama-light.svg'
 import rustIcon from '../../assets/stack/learning/rust_dark.svg'
+import rustIconLight from '../../assets/stack/learning/rust-light.svg'
+
+// Detect theme (dark or light) once
+let theme = 'light'
+if (typeof window !== 'undefined') {
+  theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+}
 
 type IStack = {
   title: string,
   stack: {
     name: string,
-    img: any
+    dark: any,
+    light?: any
   }[]
 }
 
@@ -50,51 +64,49 @@ const stacks: IStack[] = [
   {
     title: 'Frontend',
     stack: [
-      { name: 'HTML', img: html5Icon },
-      { name: 'CSS', img: cssIcon },
-      { name: 'JavaScript', img: javascriptIcon },
-      { name: 'TypeScript', img: typescriptIcon },
-      { name: 'React', img: reactIcon },
-      { name: 'TailwindCSS', img: tailwindIcon },
-      { name: 'Zustand', img: zustandIcon },
-      { name: 'Flutter', img: flutterIcon },
-      { name: 'React Native', img: reactIcon },
-      { name: 'Expo', img: expoIcon }
-
+      { name: 'Astro', dark: astroIcon, light: astroIconLight },
+      { name: 'React', dark: reactIcon },
+      { name: 'Next.js', dark: nextjsIcon },
+      { name: 'TypeScript', dark: typescriptIcon },
+      { name: 'JavaScript', dark: javascriptIcon },
+      { name: 'Tailwind CSS', dark: tailwindIcon },
+      { name: 'Zustand', dark: zustandIcon },
+      { name: 'HTML', dark: html5Icon },
+      { name: 'CSS', dark: cssIcon },
+      { name: 'Flutter', dark: flutterIcon },
+      { name: 'Expo', dark: expoIcon, light: expoIconLight }
     ]
   },
   {
-    title: 'Backend',
+    title: 'Backend & Cloud',
     stack: [
-      { name: 'NodeJS', img: nodejsIcon },
-      { name: 'Bun', img: bunIcon },
-      { name: 'NextJS', img: nextjsIcon },
-      { name: 'Supabase', img: supabaseIcon },
-      { name: 'Mercado Pago', img: mercadoPagoIcon },
-      { name: 'PostgreSQL', img: postgresqlIcon },
-      { name: 'Python', img: pythonIcon }
+      { name: 'Node.js', dark: nodejsIcon },
+      { name: 'Bun', dark: bunIcon },
+      { name: 'Next.js API', dark: nextjsIcon },
+      { name: 'Supabase', dark: supabaseIcon },
+      { name: 'PostgreSQL', dark: postgresqlIcon },
+      { name: 'Python', dark: pythonIcon }
     ]
   },
   {
     title: 'Tools',
     stack: [
-      { name: 'Git', img: gitIcon },
-      { name: 'GitHub', img: githubIcon },
-      { name: 'Terminal', img: bashIcon },
-      { name: 'VSCode', img: vscodeIcon },
-      { name: 'Postman', img: postmanIcon },
-      { name: 'Windows', img: windowsIcon },
-      { name: 'Linux', img: linuxIcon },
-      { name: 'Vercel', img: vercelIcon }
+      { name: 'Git', dark: gitIcon },
+      { name: 'GitHub', dark: githubIcon, light: githubIconLight },
+      { name: 'Terminal', dark: bashIcon, light: bashIconLight },
+      { name: 'Cursor', dark: cursorIcon },
+      { name: 'Postman', dark: postmanIcon },
+      { name: 'Linux', dark: linuxIcon },
+      { name: 'Vercel', dark: vercelIcon, light: vercelIconLight }
     ]
   },
   {
     title: 'Learning',
     stack: [
-      { name: 'Redis', img: redisIcon },
-      { name: 'AWS', img: awsIcon },
-      { name: 'AI', img: ollamaIcon },
-      { name: 'Rust', img: rustIcon }
+      { name: 'AI', dark: ollamaIcon, light: ollamaIconLight },
+      { name: 'Rust', dark: rustIcon, light: rustIconLight },
+      { name: 'AWS', dark: awsIcon, light: awsIconLight },
+      { name: 'Redis', dark: redisIcon }
     ]
   }
 ]
@@ -103,6 +115,9 @@ const stacks: IStack[] = [
 <section id='stack' aria-label='stack' class='space-y-8 sm:space-y-12'>
   <div class='text-center'>
     <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Tech Stack</h2>
+    <p class='text-base sm:text-lg text-muted-foreground mt-2 max-w-2xl mx-auto'>
+      My stack is focused on modern, high-impact technologies that enable scalable, maintainable, and high-performance solutions. I leverage leading frameworks, cloud platforms, and developer tools to deliver business value and stay at the forefront of the industry.
+    </p>
   </div>
   <div class='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8'>
     {stacks.map(({ title, stack }) => (
@@ -114,17 +129,38 @@ const stacks: IStack[] = [
         </CardHeader>
         <CardContent>
           <div class='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6'>
-            {stack.map(({ name, img }) => (
+            {stack.map(({ name, dark, light }) => (
               <div class='text-center flex flex-col items-center justify-center gap-2 group'>
                 <div class='w-16 h-16 flex items-center justify-center mb-1 bg-transparent'>
-                  <Image
-                    src={img}
-                    alt={name}
-                    width='48'
-                    height='48'
-                    class='transition-transform duration-200 group-hover:scale-110 max-h-12 max-w-12'
-                    loading='lazy'
-                  />
+                  {light ? (
+                    <>
+                      <Image
+                        src={dark}
+                        alt={name}
+                        width='48'
+                        height='48'
+                        class='transition-transform duration-200 group-hover:scale-110 max-h-12 max-w-12 dark:block hidden'
+                        loading='lazy'
+                      />
+                      <Image
+                        src={light}
+                        alt={name}
+                        width='48'
+                        height='48'
+                        class='transition-transform duration-200 group-hover:scale-110 max-h-12 max-w-12 dark:hidden block'
+                        loading='lazy'
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={dark}
+                      alt={name}
+                      width='48'
+                      height='48'
+                      class='transition-transform duration-200 group-hover:scale-110 max-h-12 max-w-12'
+                      loading='lazy'
+                    />
+                  )}
                 </div>
                 <p class='text-xs sm:text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-200 leading-tight min-h-[1.75rem] flex items-center justify-center'>{name}</p>
               </div>
