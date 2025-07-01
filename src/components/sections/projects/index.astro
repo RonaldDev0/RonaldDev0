@@ -6,16 +6,16 @@ import { Badge } from '@/components/ui/badge'
 import data from './info.json'
 
 // Fallback: import en.json for missing translations
-import enTranslations from '@/locales/en.json';
+import enTranslations from '@/locales/en.json'
 
 type IProject = {
-  id: string;
-  link?: string;
-  code: string;
-  stack: string[];
+  id: string
+  link?: string
+  code: string
+  stack: string[]
 }
 
-const projects: IProject[] = data;
+const projects: IProject[] = data
 ---
 
 <section id='projects' class='space-y-8 sm:space-y-12'>

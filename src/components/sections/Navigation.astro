@@ -37,6 +37,7 @@ const navItems: { href: string; label: string }[] = [
       </div>
       
       <div class='md:hidden flex items-center'>
+        <LanguageSwitcher currentLang={currentLang} />
         <button
           id='mobile-menu-button'
           class='p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-200'
@@ -47,7 +48,6 @@ const navItems: { href: string; label: string }[] = [
             <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
           </svg>
         </button>
-        <LanguageSwitcher currentLang={currentLang} />
       </div>
     </div>
     
