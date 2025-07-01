@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "stack": "Stack",
+    "education": "Educación",
+    "about": "Sobre mí"
+  },
+  "hero": {
+    "title": "Hola, soy Ronald Zamora",
+    "subtitle": "Full-Stack Developer Senior",
+    "description": "Construyo productos digitales escalables que potencian negocios y usuarios.",
+    "buttons": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "resume": "Resume",
+      "linkedin_aria": "Perfil de LinkedIn",
+      "github_aria": "Perfil de GitHub",
+      "resume_aria": "Ver Resume"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "role": "Full-Stack Software Engineer",
+    "p1": "Ingeniero Full-Stack orientado a resultados, con más de 3 años de experiencia entregando aplicaciones web robustas y escalables desde la idea hasta producción.",
+    "p2": "He liderado proyectos que soportan miles de usuarios, integrando funcionalidades en tiempo real y logrando alto rendimiento y fiabilidad.",
+    "p3": "Destaco en equipos dinámicos y colaborativos donde puedo impulsar la innovación, mentorizar y entregar soluciones con impacto medible."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "explore": "Explora una selección de proyectos donde he aportado valor real a negocios mediante tecnología, innovación y resultados medibles.",
+    "foodllowers": "Los proyectos con el prefijo <b>F</b> forman parte del ecosistema de aplicaciones Foodllowers—un entorno empresarial que diseñé y desarrollé desde cero, dividido en apps especializadas para mayor claridad.",
+    "key_features": "Características clave",
+    "live_demo": "Demo en vivo",
+    "view_code": "Ver código"
+  },
+  "stack": {
+    "title": "Stack",
+    "frontend": "Frontend",
+    "backend": "Backend & Cloud",
+    "tools": "Tools",
+    "learning": "Learning",
+    "description": "Mi stack está enfocado en tecnologías modernas y de alto impacto que permiten soluciones escalables, mantenibles y de alto rendimiento. Aprovecho frameworks líderes, plataformas cloud y herramientas de desarrollo para aportar valor al negocio y mantenerme a la vanguardia del sector."
+  },
+  "education": {
+    "title": "Educación",
+    "description1": "Soy un desarrollador autodidacta comprometido con el aprendizaje continuo, siempre buscando las últimas tendencias y mejores prácticas de referentes de la industria.",
+    "description2": "Transformo el conocimiento en resultados aplicando lo aprendido directamente en proyectos reales.",
+    "featured": "Canales destacados"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "whoami": "¿Quién soy?",
+    "p1": "Ingeniero Full-Stack apasionado por resolver desafíos complejos y generar impacto real en los negocios.",
+    "p2": "Destaco en equipos multidisciplinarios, combinando experiencia técnica, creatividad y comunicación clara para construir productos escalables y centrados en el usuario.",
+    "p3": "Inspirado por los videojuegos, aporto un enfoque único en la experiencia de usuario y la resolución creativa de problemas.",
+    "p4": "Conectemos y creemos soluciones significativas juntos."
+  },
+  "footer": {
+    "copyright": "© {year} Ronald Zamora. Todos los derechos reservados.",
+    "built": "Desarrollado con ❤️ usando Astro, React y Tailwind CSS",
+    "resume": "Ver Resume",
+    "name": "Ronald Zamora",
+    "role": "Software Engineer & Full-Stack Developer"
+  },
+  "projectsData": {
+    "streamingx": {
+      "title": "StreamingX",
+      "description": "Desarrollé una plataforma de video escalable inspirada en YouTube, permitiendo streaming fluido y entrega rápida de contenido. Integré procesamiento avanzado de video (FFmpeg) y arquitectura cloud-native para soportar alta concurrencia de usuarios.",
+      "keyPoints": [
+        "Lideré el desarrollo end-to-end con Next.js y TypeScript",
+        "Implementé un pipeline avanzado de procesamiento de video usando FFmpeg y Cloudflare R2",
+        "Optimizé para alta concurrencia y tiempos de carga rápidos"
+      ]
+    },
+    "foodllowers": {
+      "title": "Foodllowers",
+      "description": "Desarrollé una plataforma e-commerce de alta disponibilidad para más de 10,000 usuarios concurrentes, con sincronización en tiempo real y pagos sin fricción. Diseñada para confiabilidad y crecimiento empresarial.",
+      "keyPoints": [
+        "Soporté más de 10k usuarios concurrentes sin caídas",
+        "Integré MercadoPago logrando 99.9% de éxito en pagos",
+        "Actualizaciones en tiempo real con latencia menor a 200ms"
+      ]
+    },
+    "f-kitchens": {
+      "title": "F-Kitchens",
+      "description": "Construí un sistema de gestión de cocina en tiempo real con seguridad de nivel empresarial, optimizando el procesamiento de pedidos y minimizando errores para negocios de alimentos.",
+      "keyPoints": [
+        "Procesé más de 500 pedidos diarios en tiempo real",
+        "Reduje errores de pedidos en un 78% con validaciones robustas",
+        "Mantuve un SLA de uptime del 99.95%"
+      ]
+    },
+    "f-deliverys": {
+      "title": "F-Deliverys",
+      "description": "Creé un motor de optimización logística con CI/CD automatizado y monitoreo en tiempo real, acelerando entregas y ciclos de despliegue para operaciones empresariales.",
+      "keyPoints": [
+        "Optimizé rutas de entrega para entregas 30% más rápidas",
+        "Implementé pipelines CI/CD reduciendo el tiempo de despliegue en 40%",
+        "Seguimiento en tiempo real con 98.7% de precisión"
+      ]
+    },
+    "f-influencers": {
+      "title": "F-Influencers",
+      "description": "Desarrollé una plataforma de analítica para influencers con dashboards en tiempo real y flujos de trabajo ágiles, empoderando equipos de marketing con insights accionables y pipelines de datos escalables.",
+      "keyPoints": [
+        "Analítica de ventas en tiempo real con latencia de datos menor a 500ms",
+        "Dashboards 40% más rápidos gracias a edge caching",
+        "Reduje errores en pagos en un 78% mediante validaciones",
+        "Pipelines de datos escalables para manejar más de 1.2M eventos mensuales"
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Portafolio moderno y de alto rendimiento construido con Astro, React y TypeScript. Optimizado para UX, accesibilidad y SEO para destacar habilidades de ingeniería y marca personal.",
+      "keyPoints": [
+        "Optimización extrema para velocidad y experiencia de usuario",
+        "Animaciones UI avanzadas y paleta de colores personalizada",
+        "100/100 en Lighthouse y mejores prácticas SEO",
+        "Responsivo, accesible y multi-idioma (EN/ES)"
+      ]
+    }
+  }
+} 

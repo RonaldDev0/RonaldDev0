@@ -7,29 +7,24 @@ import linkedinIcon from '../../assets/icons/linkedin.svg'
 import githubIcon from '../../assets/icons/github.svg'
 import fileIcon from '../../assets/icons/file.svg'
 
-type IButton = {
-  text: string
-  ariaLabel: string
-  href: string
-  img: any
-}
+const { t } = Astro.props;
 
-const buttons: IButton[] = [
+const buttons = [
   {
-    text: 'LinkedIn',
-    ariaLabel: 'LinkedIn Profile',
+    text: t.buttons.linkedin,
+    ariaLabel: t.buttons.linkedin_aria,
     href: 'https://www.linkedin.com/in/ronald-zamora-524094353/',
     img: linkedinIcon
   },
   {
-    text: 'GitHub',
-    ariaLabel: 'GitHub Profile',
+    text: t.buttons.github,
+    ariaLabel: t.buttons.github_aria,
     href: 'https://github.com/RonaldDev0',
     img: githubIcon
   },
   {
-    text: 'Resume',
-    ariaLabel: 'View Resume',
+    text: t.buttons.resume,
+    ariaLabel: t.buttons.resume_aria,
     href: '/resume',
     img: fileIcon
   }
@@ -45,13 +40,13 @@ const buttons: IButton[] = [
     <div class='text-center lg:text-left space-y-4 sm:space-y-6'>
       <div class='space-y-2 sm:space-y-4'>
         <h1 class='text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight'>
-          <span class='block'>Hi, I'm Ronald Zamora</span>
+          <span class='block'>{t.title}</span>
         </h1>
         <h2 class='text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground mt-2'>
-          Full-Stack Software Engineer
+          {t.subtitle}
         </h2>
         <p class='text-lg sm:text-xl lg:text-2xl text-muted-foreground mt-4'>
-          I build scalable digital products that empower businesses and users.
+          {t.description}
         </p>
       </div>
       <div class='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start'>

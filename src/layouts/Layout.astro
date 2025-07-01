@@ -6,21 +6,27 @@ export interface Props {
 	description?: string
 	image?: string
 	canonical?: string
+	lang?: string
+	alternateLinks?: { href: string; hreflang: string }[]
 }
 
 const {
 	title = 'Ronald Zamora | Senior Full-Stack Developer - Available for Hire',
 	description = 'Senior Full-Stack Developer available for hire. Expert in React, Next.js, TypeScript, and Node.js. 3+ years building scalable web applications. Remote work ready. Based in Bogotá, Colombia. View portfolio and contact for projects.',
 	image = 'https://ronaldzamora.vercel.app/preview.webp',
-	canonical = 'https://ronaldzamora.vercel.app/'
+	canonical = 'https://ronaldzamora.vercel.app/',
+	lang = 'en',
+	alternateLinks = []
 } = Astro.props
 
 const siteName = 'Ronald Zamora | Senior Full-Stack Developer'
 const siteUrl = 'https://ronaldzamora.vercel.app/'
+const ogLocale = lang === 'es' ? 'es_CO' : 'en_US'
+const metaLanguage = lang === 'es' ? 'Spanish' : 'English'
 ---
 
 <!doctype html>
-<html lang='en' class='dark'>
+<html lang={lang} class='dark'>
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes' />
@@ -34,7 +40,7 @@ const siteUrl = 'https://ronaldzamora.vercel.app/'
 		<meta name='keywords' content='Hire Full-Stack Developer, Senior Developer for Hire, React Developer Available, Next.js Developer for Hire, TypeScript Developer Colombia, Remote Developer for Hire, Colombian Developer, Bogotá Developer, Senior Full-Stack Developer, Software Engineer for Hire, Web Developer Available, Frontend Developer for Hire, Backend Developer Colombia, Node.js Developer Available, Bun Developer for Hire, PostgreSQL Developer, Supabase Developer, AWS Developer Colombia, Flutter Developer for Hire, Mobile Developer Available, Freelance Developer Colombia, Remote Work Developer, Latin American Developer, Colombian Developer, Ronald Zamora, RonaldDev0, React, Next.js, TypeScript, JavaScript, Node.js, Bun, PostgreSQL, Supabase, AWS, Flutter, Tailwind CSS, Git, Agile, Microservices, CI/CD, Jest, Testing, Web Development, Software Development, Portfolio, Developer Portfolio, Hire Developer, Available for Projects' />
 		<meta name='author' content='Ronald Zamora' />
 		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-		<meta name='language' content='English' />
+		<meta name='language' content={metaLanguage} />
 		<meta name='revisit-after' content='1 day' />
 		<meta name='distribution' content='global' />
 		<meta name='rating' content='general' />
@@ -45,6 +51,11 @@ const siteUrl = 'https://ronaldzamora.vercel.app/'
 		
 		<!-- Canonical URL -->
 		<link rel='canonical' href={canonical} />
+
+		<!-- Alternate hreflang links -->
+		{alternateLinks.map(link => (
+			<link rel='alternate' href={link.href} hreflang={link.hreflang} />
+		))}
 		
 		<!-- Open Graph / Facebook -->
 		<meta property='og:type' content='website' />
@@ -56,8 +67,8 @@ const siteUrl = 'https://ronaldzamora.vercel.app/'
 		<meta property='og:image:width' content='1200' />
 		<meta property='og:image:height' content='630' />
 		<meta property='og:image:alt' content={title} />
-		<meta property='og:locale' content='en_US' />
-		<meta property='og:locale:alternate' content='es_CO' />
+		<meta property='og:locale' content={ogLocale} />
+		<meta property='og:locale:alternate' content={lang === 'es' ? 'en_US' : 'es_CO'} />
 		
 		<!-- Twitter -->
 		<meta property='twitter:card' content='summary_large_image' />

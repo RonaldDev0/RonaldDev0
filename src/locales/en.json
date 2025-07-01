@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "stack": "Stack",
+    "education": "Education",
+    "about": "About"
+  },
+  "hero": {
+    "title": "Hi, I'm Ronald Zamora",
+    "subtitle": "Senior Full-Stack Developer",
+    "description": "I build scalable digital products that empower businesses and users.",
+    "buttons": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "resume": "Resume",
+      "linkedin_aria": "LinkedIn Profile",
+      "github_aria": "GitHub Profile",
+      "resume_aria": "View Resume"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "role": "Full-Stack Software Engineer",
+    "p1": "Results-driven Full-Stack Software Engineer with 3+ years of experience delivering robust, scalable web applications from concept to production.",
+    "p2": "I've led projects supporting thousands of users, integrating real-time features and achieving top-tier performance and reliability.",
+    "p3": "I thrive in dynamic, collaborative teams where I can drive innovation, mentor others, and deliver solutions that make a measurable impact."
+  },
+  "projects": {
+    "title": "Projects",
+    "explore": "Explore a selection of projects where I've delivered real business value through technology, innovation, and measurable results.",
+    "foodllowers": "Projects prefixed with <b>F</b> are part of the Foodllowers application suite—a business ecosystem I designed and built from scratch, divided into specialized apps for clarity.",
+    "key_features": "Key Features",
+    "live_demo": "Live Demo",
+    "view_code": "View Code"
+  },
+  "stack": {
+    "title": "Stack",
+    "frontend": "Frontend",
+    "backend": "Backend & Cloud",
+    "tools": "Tools",
+    "learning": "Learning",
+    "description": "My stack is focused on modern, high-impact technologies that enable scalable, maintainable, and high-performance solutions. I leverage leading frameworks, cloud platforms, and developer tools to deliver business value and stay at the forefront of the industry."
+  },
+  "education": {
+    "title": "Education",
+    "description1": "I'm a self-taught developer committed to continuous learning, always seeking out the latest trends and best practices from industry leaders.",
+    "description2": "I turn knowledge into results by applying what I learn directly in real-world projects.",
+    "featured": "Featured Channels"
+  },
+  "about": {
+    "title": "About Me",
+    "whoami": "Who am I?",
+    "p1": "Full-Stack Engineer passionate about solving complex challenges and delivering real business impact.",
+    "p2": "I excel in cross-functional teams, combining technical expertise, creativity, and clear communication to build scalable, user-centric products.",
+    "p3": "Inspired by gaming, I bring a unique focus on user experience and creative problem-solving.",
+    "p4": "Let's connect and create meaningful solutions together."
+  },
+  "footer": {
+    "copyright": "© {year} Ronald Zamora. All rights reserved.",
+    "built": "Built with ❤️ using Astro, React, and Tailwind CSS",
+    "resume": "View Resume",
+    "name": "Ronald Zamora",
+    "role": "Software Engineer & Full-Stack Developer"
+  },
+  "projectsData": {
+    "streamingx": {
+      "title": "StreamingX",
+      "description": "Engineered a scalable video platform inspired by YouTube, enabling seamless streaming and rapid content delivery. Integrated advanced video processing (FFmpeg) and cloud-native architecture to support high user concurrency.",
+      "keyPoints": [
+        "Led end-to-end development with Next.js and TypeScript",
+        "Implemented advanced video processing pipeline using FFmpeg and Cloudflare R2",
+        "Optimized for high concurrency and rapid video load times"
+      ]
+    },
+    "foodllowers": {
+      "title": "Foodllowers",
+      "description": "Developed a high-availability e-commerce platform serving 10,000+ concurrent users with real-time synchronization and seamless payment processing. Designed for reliability and business growth.",
+      "keyPoints": [
+        "Handled 10k+ concurrent users with 0 downtime",
+        "Integrated MercadoPago for 99.9% payment success rate",
+        "Achieved real-time updates with <200ms latency"
+      ]
+    },
+    "f-kitchens": {
+      "title": "F-Kitchens",
+      "description": "Built a real-time kitchen management system with enterprise-grade security, streamlining order processing and minimizing errors for food businesses.",
+      "keyPoints": [
+        "Processed 500+ daily orders in real-time",
+        "Reduced order errors by 78% with robust validation systems",
+        "Maintained 99.95% system uptime SLA"
+      ]
+    },
+    "f-deliverys": {
+      "title": "F-Deliverys",
+      "description": "Created a logistics optimization engine with automated CI/CD and real-time monitoring, accelerating deliveries and deployment cycles for business operations.",
+      "keyPoints": [
+        "Optimized delivery routes for 30% faster deliveries",
+        "Implemented CI/CD pipelines reducing deployment time by 40%",
+        "Enabled real-time tracking with 98.7% accuracy"
+      ]
+    },
+    "f-influencers": {
+      "title": "F-Influencers",
+      "description": "Developed an influencer analytics platform with real-time dashboards and Agile workflows, empowering marketing teams with actionable insights and scalable data pipelines.",
+      "keyPoints": [
+        "Delivered real-time sales analytics with <500ms data latency",
+        "Accelerated dashboard loads by 40% via edge caching",
+        "Reduced payout processing errors by 78% through validation systems",
+        "Scaled data pipelines to handle 1.2M+ monthly events"
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Modern, high-performance portfolio built with Astro, React, and TypeScript. Optimized for UX, accessibility, and SEO to highlight engineering skills and personal brand.",
+      "keyPoints": [
+        "Extreme optimization for speed and user experience",
+        "Advanced UI animations and custom color palette",
+        "100/100 Lighthouse score and SEO best practices",
+        "Responsive, accessible, and multi-language (EN/ES)"
+      ]
+    }
+  }
+} 

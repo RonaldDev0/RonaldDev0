@@ -1,30 +1,31 @@
 ---
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+const { t } = Astro.props;
 ---
 
 <section id='experience' aria-label='experience' class='py-16 sm:py-20 lg:py-24'>
   <Card className='max-w-4xl mx-auto'>
     <CardHeader className='text-center space-y-4'>
       <CardTitle className='text-3xl sm:text-4xl font-bold'>
-        Experience
+        {t.title}
       </CardTitle>
       <CardDescription className='text-lg sm:text-xl'>
-        Full-Stack Software Engineer
+        {t.role}
       </CardDescription>
     </CardHeader>
     <CardContent className='space-y-6'>
       <div class='prose prose-lg dark:prose-invert max-w-none'>
         <p class='text-base sm:text-lg leading-relaxed'>
-          Results-driven Full-Stack Software Engineer with 3+ years of experience delivering robust, scalable web applications from concept to production.
+          {t.p1}
         </p>
         <p class='text-base sm:text-lg leading-relaxed'>
-          I've led projects supporting thousands of users, integrating real-time features and achieving top-tier performance and reliability.
+          {t.p2}
         </p>
       </div>
     </CardContent>
     <CardFooter className='justify-center'>
       <p class='text-base sm:text-lg leading-relaxed text-center max-w-3xl'>
-        I thrive in dynamic, collaborative teams where I can drive innovation, mentor others, and deliver solutions that make a measurable impact.
+        {t.p3}
       </p>
     </CardFooter>
   </Card>

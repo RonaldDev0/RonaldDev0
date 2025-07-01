@@ -1,4 +1,5 @@
 ---
+import translations from '@/locales/en.json'
 import Layout from '@/layouts/Layout.astro'
 import Navigation from '@/components/sections/Navigation.astro'
 import Hero from '@/components/sections/Hero.astro'
@@ -11,16 +12,16 @@ import Footer from '@/components/sections/Footer.astro'
 ---
 
 <Layout>
-	<Navigation />
+	<Navigation t={translations.nav} />
 	<div class='w-full flex justify-center px-4 sm:px-6 lg:px-8 pt-16'>
 		<div class='w-full max-w-6xl flex flex-col gap-16 sm:gap-20 lg:gap-24 mb-16 sm:mb-20 lg:mb-24'>
-			<Hero />
-			<Experience />
-			<Projects />
-			<Stack />
-			<Education />
-			<AboutMe />
+			<Hero t={translations.hero} />
+			<Experience t={translations.experience} />
+			<Projects t={{ ...translations.projects, projectsData: translations.projectsData }} />
+			<Stack t={translations.stack} />
+			<Education t={translations.education} />
+			<AboutMe t={translations.about} />
 		</div>
 	</div>
-	<Footer />
+	<Footer t={translations.footer} />
 </Layout>

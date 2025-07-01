@@ -1,14 +1,17 @@
 ---
 import ThemeToggle from '@/components/ui/ThemeToggle.astro'
-
-const navItems = [
-  { href: '#hero', label: 'Home' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#stack', label: 'Stack' },
-  { href: '#education', label: 'Education' },
-  { href: '#about-me', label: 'About' }
-]
+const { t } = Astro.props;
+if (!t) {
+  throw new Error("[Navigation.astro] Missing 't' prop. Pass the translation object: <Navigation t={translations.nav} />");
+}
+const navItems: { href: string; label: string }[] = [
+  { href: '#hero', label: t.home },
+  { href: '#experience', label: t.experience },
+  { href: '#projects', label: t.projects },
+  { href: '#stack', label: t.stack },
+  { href: '#education', label: t.education },
+  { href: '#about-me', label: t.about }
+];
 ---
 
 <nav class='fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50'>
@@ -19,7 +22,7 @@ const navItems = [
       </a>
       
       <div class='hidden md:flex items-center space-x-8'>
-        {navItems.map(item => (
+        {navItems.map((item: { href: string; label: string }) => (
           <a
             href={item.href}
             class='text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group'
@@ -48,7 +51,7 @@ const navItems = [
     <!-- Mobile menu -->
     <div id='mobile-menu' class='md:hidden hidden'>
       <div class='px-2 pt-2 pb-3 space-y-1 border-t border-border/50'>
-        {navItems.map(item => (
+        {navItems.map((item: { href: string; label: string }) => (
           <a
             href={item.href}
             class='block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors duration-200'

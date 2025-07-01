@@ -30,7 +30,6 @@ export default defineConfig({
       }
     },
     plugins: [tailwindcss()],
-    // Optimizaciones de CSS
     css: {
       devSourcemap: false,
     }

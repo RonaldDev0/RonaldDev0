@@ -1,4 +1,5 @@
 ---
+const { t } = Astro.props;
 const currentYear = new Date().getFullYear()
 ---
 
@@ -51,10 +52,10 @@ const currentYear = new Date().getFullYear()
     
     <div class='mt-8 pt-8 border-t border-border/50 text-center'>
       <p class='text-sm text-muted-foreground'>
-        © {currentYear} Ronald Zamora. All rights reserved.
+        {t.copyright.replace('{year}', new Date().getFullYear())}
       </p>
       <p class='text-xs text-muted-foreground mt-2'>
-        Built with ❤️ using Astro, React, and Tailwind CSS
+        {t.built}
       </p>
     </div>
   </div>

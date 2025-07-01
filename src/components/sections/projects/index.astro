@@ -1,91 +1,95 @@
 ---
+const { t } = Astro.props;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import data from './info.json'
 
+// Fallback: import en.json for missing translations
+import enTranslations from '@/locales/en.json';
+
 type IProject = {
-  title: string
-  description: string
-  keyPoints: string[]
-  link?: string
-  image?: string
-  code: string
-  stack: string[]
+  id: string;
+  link?: string;
+  code: string;
+  stack: string[];
 }
 
-const projects: IProject[] = data
+const projects: IProject[] = data;
 ---
 
 <section id='projects' class='space-y-8 sm:space-y-12'>
   <div class='space-y-4 sm:space-y-6 text-center max-w-4xl mx-auto'>
-    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Projects</h2>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>{t.title}</h2>
     <div class='space-y-3'>
-      <p class='text-lg sm:text-xl text-muted-foreground'>
-        Explore a selection of projects where I've delivered real business value through technology, innovation, and measurable results.
-      </p>
-      <p class='text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto'>
-        Projects prefixed with <b>F</b> are part of the Foodllowers application suite—a business ecosystem I designed and built from scratch, divided into specialized apps for clarity.
-      </p>
+      <p class='text-lg sm:text-xl text-muted-foreground'>{t.explore}</p>
+      <p class='text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto' set:html={t.foodllowers}></p>
     </div>
   </div>
 
   <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
-    {projects.map(project => (
-      <Card className='h-full flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1'>
-        <CardHeader className='space-y-3'>
-          <CardTitle className='text-xl sm:text-2xl font-bold line-clamp-2'>
-            {project.title}
-          </CardTitle>
-          <CardDescription className='text-sm sm:text-base leading-relaxed'>
-            {project.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className='flex-1 space-y-4'>
-          <div class='space-y-3'>
-            <h3 class='font-semibold text-sm text-muted-foreground uppercase tracking-wide'>Key Features</h3>
-            <ul class='space-y-3'>
-              {project.keyPoints.map(point => (
-                <li class='flex gap-3 items-center'>
-                  <svg class='w-5 h-5 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M5 13l4 4L19 7' />
-                  </svg>
-                  <span class='text-sm sm:text-base leading-relaxed'>{point}</span>
-                </li>
+    {projects.map((project: IProject) => {
+      const projectData = (t.projectsData as any)[project.id] || (enTranslations.projectsData as any)[project.id] || {
+        title: project.id,
+        description: 'No translation available.',
+        keyPoints: []
+      };
+      return (
+        <Card className='h-full flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1'>
+          <CardHeader className='space-y-3'>
+            <CardTitle className='text-xl sm:text-2xl font-bold line-clamp-2'>
+              {projectData.title}
+            </CardTitle>
+            <CardDescription className='text-sm sm:text-base leading-relaxed'>
+              {projectData.description}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className='flex-1 space-y-4'>
+            <div class='space-y-3'>
+              <h3 class='font-semibold text-sm text-muted-foreground uppercase tracking-wide'>{t.key_features}</h3>
+              <ul class='space-y-3'>
+                {projectData.keyPoints.map((point: string) => (
+                  <li class='flex gap-3 items-center'>
+                    <svg class='w-5 h-5 flex-shrink-0 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                      <path stroke-linecap='round' stroke-linejoin='round' stroke-width={2} d='M5 13l4 4L19 7' />
+                    </svg>
+                    <span class='text-sm sm:text-base leading-relaxed'>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </CardContent>
+          <CardFooter className='flex flex-col space-y-4 mt-auto'>
+            <div class='flex flex-wrap gap-2'>
+              {project.stack.map(tech => (
+                <Badge variant='secondary' className='text-xs'>
+                  {tech}
+                </Badge>
               ))}
-            </ul>
-          </div>
-        </CardContent>
-        <CardFooter className='flex flex-col space-y-4 mt-auto'>
-          <div class='flex flex-wrap gap-2'>
-            {project.stack.map(tech => (
-              <Badge variant='secondary' className='text-xs'>
-                {tech}
-              </Badge>
-            ))}
-          </div>
-          <div class='flex w-full gap-3'>
-            {project.link && (
-              <a href={project.link} target='_blank' rel='noopener noreferrer' class='flex-1'>
+            </div>
+            <div class='flex w-full gap-3'>
+              {project.link && (
+                <a href={project.link} target='_blank' rel='noopener noreferrer' class='flex-1'>
+                  <Button
+                    variant='outline'
+                    className='w-full font-medium transition-all duration-200 hover:scale-105'
+                  >
+                    {t.live_demo}
+                  </Button>
+                </a>
+              )}
+              <a href={project.code} target='_blank' rel='noopener noreferrer' class='flex-1'>
                 <Button
                   variant='outline'
                   className='w-full font-medium transition-all duration-200 hover:scale-105'
                 >
-                  Live Demo
+                  {t.view_code}
                 </Button>
               </a>
-            )}
-            <a href={project.code} target='_blank' rel='noopener noreferrer' class='flex-1'>
-              <Button
-                variant='outline'
-                className='w-full font-medium transition-all duration-200 hover:scale-105'
-              >
-                View Code
-              </Button>
-            </a>
-          </div>
-        </CardFooter>
-      </Card>
-    ))}
+            </div>
+          </CardFooter>
+        </Card>
+      );
+    })}
   </div>
 </section>

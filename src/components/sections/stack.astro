@@ -110,13 +110,15 @@ const stacks: IStack[] = [
     ]
   }
 ]
+
+const { t } = Astro.props;
 ---
 
 <section id='stack' aria-label='stack' class='space-y-8 sm:space-y-12'>
   <div class='text-center'>
-    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Tech Stack</h2>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>{t.title}</h2>
     <p class='text-base sm:text-lg text-muted-foreground mt-2 max-w-2xl mx-auto'>
-      My stack is focused on modern, high-impact technologies that enable scalable, maintainable, and high-performance solutions. I leverage leading frameworks, cloud platforms, and developer tools to deliver business value and stay at the forefront of the industry.
+      {t.description}
     </p>
   </div>
   <div class='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8'>

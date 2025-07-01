@@ -90,21 +90,23 @@ const education: IEducation[] = [
     link: 'https://www.youtube.com/@NateGentile7'
   }
 ]
+
+const { t } = Astro.props;
 ---
 
 <section id='education' class='space-y-8 sm:space-y-12'>
   <div class='text-center space-y-4 sm:space-y-6 max-w-4xl mx-auto'>
-    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>Education</h2>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>{t.title}</h2>
     <CardDescription className='text-base sm:text-lg leading-relaxed max-w-3xl mx-auto'>
-      I'm a self-taught developer committed to continuous learning, always seeking out the latest trends and best practices from industry leaders.
+      {t.description1}
       <br />
-      I turn knowledge into results by applying what I learn directly in real-world projects.
+      {t.description2}
     </CardDescription>
   </div>
   <Card className='max-w-6xl mx-auto'>
     <CardHeader className='text-center'>
       <CardTitle>
-        <h3 class='text-2xl sm:text-3xl font-bold'>Featured Channels</h3>
+        <h3 class='text-2xl sm:text-3xl font-bold'>{t.featured}</h3>
       </CardTitle>
     </CardHeader>
     <CardContent>

@@ -1,33 +1,26 @@
 ---
 import { Image } from 'astro:assets'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+const { t } = Astro.props;
 ---
 
 <section id='about-me' class='space-y-8 sm:space-y-12'>
   <div class='text-center'>
-    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>About Me</h2>
+    <h2 class='text-3xl sm:text-4xl lg:text-5xl font-bold'>{t.title}</h2>
   </div>
   <Card className='max-w-6xl mx-auto'>
     <CardHeader className='text-center'>
       <CardTitle>
-        <h3 class='text-2xl sm:text-3xl font-bold'>Who am I?</h3>
+        <h3 class='text-2xl sm:text-3xl font-bold'>{t.whoami}</h3>
       </CardTitle>
     </CardHeader>
     <CardContent>
       <div class='flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 items-center'>
         <div class='flex-1 space-y-6 prose prose-lg dark:prose-invert max-w-none'>
-          <p class='text-base sm:text-lg leading-relaxed'>
-            Full-Stack Engineer passionate about solving complex challenges and delivering real business impact.
-          </p>
-          <p class='text-base sm:text-lg leading-relaxed'>
-            I excel in cross-functional teams, combining technical expertise, creativity, and clear communication to build scalable, user-centric products.
-          </p>
-          <p class='text-base sm:text-lg leading-relaxed'>
-            Inspired by gaming, I bring a unique focus on user experience and creative problem-solving.
-          </p>
-          <p class='text-base sm:text-lg leading-relaxed'>
-            Let's connect and create meaningful solutions together.
-          </p>
+          <p class='text-base sm:text-lg leading-relaxed'>{t.p1}</p>
+          <p class='text-base sm:text-lg leading-relaxed'>{t.p2}</p>
+          <p class='text-base sm:text-lg leading-relaxed'>{t.p3}</p>
+          <p class='text-base sm:text-lg leading-relaxed'>{t.p4}</p>
         </div>
         <div class='flex-shrink-0'>
           <Image
