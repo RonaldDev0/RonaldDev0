@@ -132,7 +132,7 @@ const { t } = Astro.props;
         <CardContent>
           <div class='grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6'>
             {stack.map(({ name, dark, light }) => (
-              <div class='text-center flex flex-col items-center justify-center gap-2 group'>
+              <div class='text-center flex flex-col items-center justify-center gap-2 group cursor-pointer'>
                 <div class='w-16 h-16 flex items-center justify-center mb-1 bg-transparent'>
                   {light ? (
                     <>

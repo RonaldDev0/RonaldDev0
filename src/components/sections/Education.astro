@@ -91,7 +91,7 @@ const education: IEducation[] = [
   }
 ]
 
-const { t } = Astro.props;
+const { t } = Astro.props
 ---
 
 <section id='education' class='space-y-8 sm:space-y-12'>
@@ -116,7 +116,7 @@ const { t } = Astro.props;
             href={item.link} 
             target='_blank' 
             rel='noopener noreferrer'
-            class='text-center flex flex-col items-center justify-center gap-3 p-4 rounded-lg hover:bg-accent transition-all duration-200 group'
+            class='text-center flex flex-col items-center justify-center gap-3 p-4 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-all duration-200 group'
           >
             <div class='relative'>
               <Image

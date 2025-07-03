@@ -1,8 +1,0 @@
-- upgrade UI/UX [animations, color palette]
-- update card Image for share
-
-
-[optimization notes]
-
-- reduce strings or implement lazy loading for best performance
-- requests are blocking the inital page, upgrade this for best performance
