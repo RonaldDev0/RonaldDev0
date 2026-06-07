@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export interface Props {
 	title?: string
@@ -223,7 +224,7 @@ const metaLanguage = lang === 'es' ? 'Spanish' : 'English'
 	</head>
 	<body class="min-h-screen flex flex-col bg-background text-foreground reveal">
 		<slot />
-		
+		<Analytics />
 	</body>
 </html>
 
